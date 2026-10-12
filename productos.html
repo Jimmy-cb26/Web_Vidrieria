@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Soluciones y Productos | CristalesGraf Lima</title>
+  <meta name="description" content="Catálogo técnico de mamparas corredizas, puertas de ducha de cristal templado, muros cortina, ventanas acústicas y barandas. Fabricación a medida en Los Olivos, Lima.">
+  <meta name="keywords" content="mamparas corredizas serie 25, puertas de ducha cristal templado lima, muro cortina los olivos, ventanas acusticas hermeticas, cristalesgraf productos">
+  
+  <meta property="og:title" content="Catálogo de Productos y Soluciones | CristalesGraf">
+  <meta property="og:description" content="Línea Residencial y Comercial de cristal templado y perfilería pesada de aluminio. Cotización directa a WhatsApp.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Space Grotesk + IBM Plex Sans + IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#00529c',
+              'navy-dark': '#002d5a',
+              'navy-light': '#0066b8',
+              cyan: '#00b4d8',
+              'cyan-dark': '#0096c7',
+              'cyan-light': '#e0f2fe',
+              slate: '#1e293b',
+              gray: '#64748b',
+              surface: '#f8fafc',
+              border: '#cbd5e1',
+              whatsapp: '#25d366',
+              'whatsapp-dark': '#1ebd5b',
+              'whatsapp-hover': '#16a34a'
+            }
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"IBM Plex Sans"', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Exact Typographic Scale from DESIGN.md */
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      line-height: 1.08;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    h2 {
+      font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    h3 {
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      line-height: 1.25;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    h4 {
+      font-size: 1rem;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Browser Surfaces Theme */
+    ::selection {
+      background-color: #00529c;
+      color: #f8fafc;
+    }
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 4px;
+      border: 2px solid #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00529c;
+    }
+
+    /* Focus styling */
+    input:focus, select:focus, textarea:focus, button:focus-visible {
+      outline: 2px solid #00529c;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="bg-brand-surface text-slate-900 font-sans antialiased selection:bg-brand-navy selection:text-white">
+
+
+  <!-- Global Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-navy py-1" aria-label="CristalesGraf - Inicio">
+        <img src="logo.png" alt="CristalesGraf - Vidrios y Aluminios" class="h-11 sm:h-12 md:h-14 w-auto object-contain">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="index.html" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors py-1">Inicio</a>
+        <a href="productos.html" class="text-sm font-semibold text-brand-navy border-b-2 border-brand-navy py-1">Soluciones</a>
+        <a href="proyectos.html" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors py-1">Obras Ejecutadas</a>
+        <a href="nosotros.html" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors py-1">Nosotros</a>
+        <a href="contacto.html" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors py-1">Contacto y Taller</a>
+      </nav>
+
+      <!-- CTAs -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="index.html#cotizador-express" class="inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-brand-navy-light text-white text-xs font-semibold px-4 py-2.5 rounded transition shadow-sm font-mono uppercase tracking-wide">
+          <span>Cotizador Express</span>
+        </a>
+        <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20deseo%20cotizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsapp-hover text-slate-950 font-bold text-xs px-4 py-2.5 rounded transition shadow-sm font-mono uppercase tracking-wider">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.772.88 2.792.88 3.183 0 5.77-2.587 5.77-5.766.001-3.183-2.584-5.766-5.77-5.766zm9.969 5.766c0 5.497-4.471 9.968-9.969 9.968-1.758 0-3.411-.462-4.851-1.272l-5.18 1.366 1.39-5.074c-.927-1.503-1.46-3.267-1.46-5.088 0-5.498 4.471-9.969 9.97-9.969 5.498 0 9.97 4.471 9.97 9.969z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" class="lg:hidden p-2 text-slate-700 hover:text-brand-navy rounded-md focus:outline-none focus:ring-2 focus:ring-brand-navy">
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="index.html" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3">Inicio</a>
+      <a href="productos.html" class="block py-2 text-base font-semibold text-brand-navy border-l-4 border-brand-navy pl-3">Soluciones y Catálogo</a>
+      <a href="proyectos.html" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3">Obras Ejecutadas</a>
+      <a href="nosotros.html" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3">Nosotros y Taller</a>
+      <a href="contacto.html" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3">Contacto y Cotización</a>
+      <div class="pt-4 border-t border-slate-100 flex flex-col gap-2">
+        <a href="index.html#cotizador-express" class="w-full text-center bg-brand-navy text-white font-mono text-sm font-semibold py-3 rounded">
+          IR AL COTIZADOR EXPRESS
+        </a>
+        <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20deseo%20cotizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-brand-whatsapp text-slate-950 font-mono text-sm font-bold py-3 rounded flex items-center justify-center gap-2">
+          COTIZAR POR WHATSAPP
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner / Intro -->
+  <section class="bg-white border-b border-slate-200 pt-12 pb-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 text-xs font-mono text-slate-600 mb-3">
+          <span class="font-bold text-brand-navy">TALLER DIRECTO</span>
+          <span>&middot;</span>
+          <span>ESPECIFICACIONES TÉCNICAS PERÚ</span>
+          <span>&middot;</span>
+          <span>NORMA E.040</span>
+        </div>
+        <h1 class="font-display text-brand-navy mb-4">
+          Catálogo Técnico de Vidriería y Carpintería de Aluminio
+        </h1>
+        <p class="text-lg text-slate-700 leading-relaxed">
+          Sistemas residenciales y soluciones de fachada comercial elaborados bajo estrictos estándares de seguridad estructural. Seleccione cualquier modelo para cotizar con sus medidas exactas.
+        </p>
+      </div>
+
+      <!-- Filter Tabs Bar -->
+      <div class="mt-10 flex flex-wrap gap-2 border-b border-slate-200 pb-3" role="tablist">
+        <button id="tab-all" onclick="filterCatalog('all')" class="catalog-tab font-mono text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded bg-brand-navy text-white transition">
+          Todas las Soluciones (8)
+        </button>
+        <button id="tab-residencial" onclick="filterCatalog('residencial')" class="catalog-tab font-mono text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+          Línea Residencial (4)
+        </button>
+        <button id="tab-comercial" onclick="filterCatalog('comercial')" class="catalog-tab font-mono text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+          Línea Comercial y Obras (4)
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Product Catalog Grid -->
+  <main class="py-14 sm:py-20 bg-brand-surface border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <h2 class="sr-only">Línea de Soluciones Disponibles</h2>
+      
+      <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Producto 1: Mamparas Corredizas Serie 25 / 38 -->
+        <article class="product-item bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="residencial">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+              <span class="font-mono text-xs font-bold text-brand-navy">SERIE 25 / 38</span>
+              <span class="font-mono text-xs text-slate-500">Residencial</span>
+            </div>
+            <h3 class="font-display text-brand-navy mb-2">Mamparas Corredizas de Terraza y Sala</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+              Fabricadas con perfilería de aluminio reforzado anodizado o negro mate. Rodajes de nylon de doble pista y cristal templado de 8mm o 10mm para máxima absorción de ruidos y vientos.
+            </p>
+            <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
+              <div><strong>Espesor:</strong> 8 mm y 10 mm Templado Limatambo</div>
+              <div><strong>Perfilería:</strong> Aluminio Serie 25 / 38 pesado</div>
+              <div><strong>Accesorios:</strong> Cierres pico de loro, felpa siliconada</div>
+              <div><strong>Garantía:</strong> 1 año formal de taller</div>
+            </div>
+          </div>
+          <button onclick="openQuoteModal('Mampara Corrediza Serie 25/38')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+            <span>Cotizar este modelo</span>
+            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </article>
+
+        <!-- Producto 2: Puertas de Ducha en Acero Inoxidable -->
+        <article class="product-item bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="residencial">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+              <span class="font-mono text-xs font-bold text-brand-navy">ACERO INOX 304</span>
+              <span class="font-mono text-xs text-slate-500">Residencial</span>
+            </div>
+            <h3 class="font-display text-brand-navy mb-2">Puertas de Ducha Templadas Suspendidas</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+              Sistemas corredizos superiores con tubo guía macizo o batientes con bisagras pesadas de acero inoxidable 304. Resistentes al vapor y sarro, con sellos magnéticos antigoteo.
+            </p>
+            <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
+              <div><strong>Espesor:</strong> 8 mm Templado Incoloro / Satinado</div>
+              <div><strong>Herrajes:</strong> Acero Inoxidable Quirúrgico 304</div>
+              <div><strong>Hermeticidad:</strong> Perfiles de policarbonato con imán</div>
+              <div><strong>Montaje:</strong> Sin marco inferior para fácil aseo</div>
+            </div>
+          </div>
+          <button onclick="openQuoteModal('Puerta de Ducha en Cristal Templado 8mm')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+            <span>Cotizar este modelo</span>
+            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </article>
+
+        <!-- Producto 3: Ventanas Acústicas Herméticas -->
+        <article class="product-item bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="residencial">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+              <span class="font-mono text-xs font-bold text-brand-navy">AISLAMIENTO 75%</span>
+              <span class="font-mono text-xs text-slate-500">Residencial</span>
+            </div>
+            <h3 class="font-display text-brand-navy mb-2">Ventanas Antirruido y Cierre Hermético</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+              Diseñadas para avenidas de alto tránsito sonoro en Lima. Perfilería con cámara de compresión, doble contacto perimétrico y cristales laminados acústicos o templados de 8mm.
+            </p>
+            <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
+              <div><strong>Configuración:</strong> Proyectante, corrediza o fija</div>
+              <div><strong>Vidrio:</strong> Laminado Acústico o Templado 8mm</div>
+              <div><strong>Cierre:</strong> Aldaba embutida multipunto</div>
+              <div><strong>Hermeticidad:</strong> Felpa siliconada + empaques EPDM</div>
+            </div>
+          </div>
+          <button onclick="openQuoteModal('Ventana Acústica Hermética')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+            <span>Cotizar este modelo</span>
+            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </article>
+
+        <!-- Producto 4: Barandas de Cristal Templado -->
+        <article class="product-item bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="residencial">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+              <span class="font-mono text-xs font-bold text-brand-navy">SEGURIDAD E.040</span>
+              <span class="font-mono text-xs text-slate-500">Residencial</span>
+            </div>
+            <h3 class="font-display text-brand-navy mb-2">Barandas para Balcón y Escaleras</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+              Sistemas autoportantes o con postes de acero inoxidable y anclaje químico estructural. Máxima transparencia y seguridad certificada contra impactos para viviendas y terrazas.
+            </p>
+            <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
+              <div><strong>Espesor:</strong> 10 mm Templado o 10mm Laminado</div>
+              <div><strong>Anclajes:</strong> Postes inox 304 o botones de piso</div>
+              <div><strong>Pasamanos:</strong> Tubo ranurado inox opcional</div>
+              <div><strong>Pruebas:</strong> Resistencia a cargas vivas y empuje</div>
+            </div>
+          </div>
+          <button onclick="openQuoteModal('Baranda de Cristal Templado 10mm')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+            <span>Cotizar este modelo</span>
+            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </article>
+
+        <!-- Producto 5: Muros Cortina / Fachadas Integrales -->
+        <article class="product-item bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="comercial">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+              <span class="font-mono text-xs font-bold text-brand-navy">INGENIERÍA ESTRUCTURAL</span>
+              <span class="font-mono text-xs text-slate-500">Comercial</span>
+            </div>
+            <h3 class="font-display text-brand-navy mb-2">Muros Cortina y Fachadas Suspendidas</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+              Envolventes vidriadas para edificios multifamiliares y centros comerciales. Estructura portante con montantes de aluminio extruido y fijación con silicona estructural Dow Corning.
+            </p>
+            <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
+              <div><strong>Vidrio:</strong> 10 mm Templado / Insulado / Reflejante</div>
+              <div><strong>Perfilería:</strong> Perfilería pesada de línea estructural</div>
+              <div><strong>Sellado:</strong> Silicona estructural de cura neutra</div>
+              <div><strong>Cálculo:</strong> Verificación de deflexión y viento</div>
+            </div>
+          </div>
+          <button onclick="openQuoteModal('Muro Cortina / Fachada Comercial')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+            <span>Cotizar este modelo</span>
+            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </article>
+
+        <!-- Producto 6: Frentes de Tienda y Vitrinas Comerciales -->
+        <article class="product-item bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="comercial">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+              <span class="font-mono text-xs font-bold text-brand-navy">ALTO TRÁNSITO</span>
+              <span class="font-mono text-xs text-slate-500">Comercial</span>
+            </div>
+            <h3 class="font-display text-brand-navy mb-2">Frentes de Tienda y Vitrinas Comerciales</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+              Cerramientos en cristal templado de 10mm para galerías, centros comerciales y locales a pie de calle en Lima. Puertas batientes con freno hidráulico de piso Dorma / Miyasawa.
+            </p>
+            <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
+              <div><strong>Vidrio:</strong> 10 mm Templado de alta claridad</div>
+              <div><strong>Mecanismo:</strong> Freno hidráulico de piso para 120kg</div>
+              <div><strong>Cerradura:</strong> Chapa central al piso de seguridad</div>
+              <div><strong>Jalador:</strong> Acero inox tubular tipo H (40cm a 1.20m)</div>
+            </div>
+          </div>
+          <button onclick="openQuoteModal('Frente de Tienda con Freno Hidráulico')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+            <span>Cotizar este modelo</span>
+            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </article>
+
+        <!-- Producto 7: Divisiones de Oficina en Cristal Templado -->
+        <article class="product-item bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="comercial">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+              <span class="font-mono text-xs font-bold text-brand-navy">LÍNEA CORPORATIVA</span>
+              <span class="font-mono text-xs text-slate-500">Comercial</span>
+            </div>
+            <h3 class="font-display text-brand-navy mb-2">Divisiones de Oficina y Directorios</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+              Tabiquería de cristal modulada con perfil de aluminio anodizado minimalista o zócalos de sujeción invisible. Opciones de arenado decorativo, vinil esmerilado o cristal incoloro.
+            </p>
+            <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
+              <div><strong>Espesor:</strong> 8 mm y 10 mm Templado</div>
+              <div><strong>Acabados:</strong> Esmerilado en franjas o logo corporativo</div>
+              <div><strong>Puertas:</strong> Batientes o corredizas aéreas</div>
+              <div><strong>Rapidez:</strong> Instalación modular limpia en horarios no hábiles</div>
+            </div>
+          </div>
+          <button onclick="openQuoteModal('Divisiones de Oficina en Cristal Templado')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+            <span>Cotizar este modelo</span>
+            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </article>
+
+        <!-- Producto 8: Techos de Policarbonato y Cristal Laminado -->
+        <article class="product-item bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="comercial">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+              <span class="font-mono text-xs font-bold text-brand-navy">COBERTURA EXTERIOR</span>
+              <span class="font-mono text-xs text-slate-500">Comercial / Residencial</span>
+            </div>
+            <h3 class="font-display text-brand-navy mb-2">Techos en Policarbonato y Cristal Estructural</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+              Estructuras metálicas y de aluminio con policarbonato alveolar o cristal laminado con protección UV. Diseñados con caída pluvial y canaletas colectoras para patios y terrazas.
+            </p>
+            <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
+              <div><strong>Material:</strong> Policarbonato 8/10mm o Cristal Laminado</div>
+              <div><strong>Estructura:</strong> Tubo de aluminio o fierro galvanizado</div>
+              <div><strong>Protección:</strong> Filtro UV para intemperie</div>
+              <div><strong>Mantenimiento:</strong> Sellado estanco contra goteras</div>
+            </div>
+          </div>
+          <button onclick="openQuoteModal('Techo de Policarbonato / Cristal Laminado')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+            <span>Cotizar este modelo</span>
+            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Technical Spec Summary Strip -->
+  <section class="py-12 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
+        <div class="border-l-2 border-brand-navy pl-4">
+          <strong class="font-display text-brand-navy block text-base">Cristal Templado Certificado</strong>
+          <p class="text-slate-600 text-xs mt-1">Horneado térmico respaldado por Corporación Limatambo, con sello de seguridad inalterable.</p>
+        </div>
+        <div class="border-l-2 border-brand-navy pl-4">
+          <strong class="font-display text-brand-navy block text-base">Aluminio Serie Pesada</strong>
+          <p class="text-slate-600 text-xs mt-1">Perfiles de extrusión de alto espesor en acabados anodizado natural, negro mate y madera.</p>
+        </div>
+        <div class="border-l-2 border-brand-navy pl-4">
+          <strong class="font-display text-brand-navy block text-base">Herrajes en Inox 304</strong>
+          <p class="text-slate-600 text-xs mt-1">Bisagras, tiradores y rodamientos que resisten la salinidad y humedad costera de Lima sin picarse.</p>
+        </div>
+        <div class="border-l-2 border-brand-navy pl-4">
+          <strong class="font-display text-brand-navy block text-base">Rectificación en Obra</strong>
+          <p class="text-slate-600 text-xs mt-1">Visita técnica para medición milimétrica con distanciómetro láser en vanos construidos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="bg-brand-navy-dark text-slate-400 font-sans border-t border-slate-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1 -->
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 bg-brand-navy rounded flex items-center justify-center text-white font-display font-bold text-lg border border-slate-700">
+              <svg class="w-5 h-5 text-brand-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <path d="M3 9h18"></path>
+                <path d="M9 21V9"></path>
+              </svg>
+            </div>
+            <span class="font-display font-bold text-2xl text-white tracking-tight">
+              CRISTALES<span class="text-brand-cyan">GRAF</span>
+            </span>
+          </div>
+          <p class="text-sm leading-relaxed text-slate-400 mb-6">
+            Empresa especialista en manufactura e instalación de carpintería de aluminio y cristal templado de seguridad en Lima. Más de 18 años atendiendo proyectos residenciales y comerciales.
+          </p>
+          <div class="font-mono text-xs text-slate-300 space-y-1">
+            <div>RUC: 10416805821</div>
+            <div>Sede Central: Av. Tomás Valle 1102, Los Olivos, Lima</div>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="lg:col-span-2">
+          <h4 class="font-mono text-xs font-bold text-white uppercase tracking-wider mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white transition">Inicio</a></li>
+            <li><a href="productos.html" class="hover:text-white transition">Soluciones y Catálogo</a></li>
+            <li><a href="proyectos.html" class="hover:text-white transition">Proyectos y Obras</a></li>
+            <li><a href="nosotros.html" class="hover:text-white transition">Nosotros</a></li>
+            <li><a href="contacto.html" class="hover:text-white transition">Contacto y Taller</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="lg:col-span-3">
+          <h4 class="font-mono text-xs font-bold text-white uppercase tracking-wider mb-4">Especialidades</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="productos.html" class="hover:text-white transition">Mamparas Corredizas Serie 25/38</a></li>
+            <li><a href="productos.html" class="hover:text-white transition">Puertas de Ducha Acero Inox</a></li>
+            <li><a href="productos.html" class="hover:text-white transition">Muros Cortina y Frentes de Tienda</a></li>
+            <li><a href="productos.html" class="hover:text-white transition">Ventanas Acústicas Herméticas</a></li>
+            <li><a href="productos.html" class="hover:text-white transition">Barandas de Cristal Templado</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="lg:col-span-3">
+          <h4 class="font-mono text-xs font-bold text-white uppercase tracking-wider mb-4">Contacto Directo</h4>
+          <div class="space-y-3 text-sm">
+            <div>
+              <span class="block text-xs font-mono text-slate-500 uppercase">Teléfono Fijo</span>
+              <a href="tel:015331887" class="text-white font-mono hover:text-brand-whatsapp transition">(01) 533-1887</a>
+            </div>
+            <div>
+              <span class="block text-xs font-mono text-slate-500 uppercase">WhatsApp de Cotizaciones</span>
+              <a href="https://wa.me/51989086972" target="_blank" rel="noopener noreferrer" class="text-brand-whatsapp font-mono font-bold hover:underline">+51 989 086 972</a>
+            </div>
+            <div>
+              <span class="block text-xs font-mono text-slate-500 uppercase">Horario de Taller</span>
+              <span class="text-slate-300">Lunes a Sábado: 8:00 am &ndash; 6:00 pm</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+        <div>
+          &copy; 2026 CristalesGraf. Todos los derechos reservados.
+        </div>
+        <div>
+          <span>Lima, Perú</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Modal Interactivo de Cotización de Producto -->
+  <div id="product-quote-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white border-2 border-brand-navy rounded max-w-lg w-full p-6 sm:p-7 relative shadow-2xl">
+      
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
+        <div>
+          <span class="font-mono text-xs font-bold text-brand-navy uppercase">Cotización por Ítem</span>
+          <h2 id="modal-product-title" class="font-display text-xl font-bold text-brand-navy mt-0.5">Producto</h2>
+        </div>
+        <button onclick="closeQuoteModal()" aria-label="Cerrar modal" class="p-1 text-slate-400 hover:text-slate-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <form id="modal-form" class="space-y-4" onsubmit="event.preventDefault(); submitModalWhatsApp();">
+        <input type="hidden" id="modal-hidden-product" value="">
+
+        <div>
+          <label class="block font-mono text-xs font-bold uppercase text-slate-700 mb-1">Espesor Requerido</label>
+          <select id="modal-thickness" class="w-full h-10 px-3 border border-slate-300 rounded bg-slate-50 font-sans text-sm font-medium">
+            <option value="6mm Templado">6 mm Templado</option>
+            <option value="8mm Templado" selected>8 mm Templado (Recomendado)</option>
+            <option value="10mm Templado Estructural">10 mm Templado Estructural</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-mono text-xs font-bold uppercase text-slate-700 mb-1">Ancho (m)</label>
+            <input type="number" id="modal-width" step="0.01" min="0.30" value="2.00" class="w-full h-10 px-3 border border-slate-300 rounded bg-slate-50 font-mono text-sm" required>
+          </div>
+          <div>
+            <label class="block font-mono text-xs font-bold uppercase text-slate-700 mb-1">Alto (m)</label>
+            <input type="number" id="modal-height" step="0.01" min="0.30" value="2.10" class="w-full h-10 px-3 border border-slate-300 rounded bg-slate-50 font-mono text-sm" required>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-mono text-xs font-bold uppercase text-slate-700 mb-1">Distrito de Lima</label>
+          <input type="text" id="modal-district" value="Los Olivos" placeholder="Ej. San Borja, SMP, Miraflores..." class="w-full h-10 px-3 border border-slate-300 rounded bg-slate-50 font-sans text-sm" required>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full h-12 bg-brand-whatsapp hover:bg-brand-whatsapp-hover text-slate-950 font-mono font-bold text-sm uppercase rounded flex items-center justify-center gap-2 transition shadow">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.772.88 2.792.88 3.183 0 5.77-2.587 5.77-5.766.001-3.183-2.584-5.766-5.77-5.766zm9.969 5.766c0 5.497-4.471 9.968-9.969 9.968-1.758 0-3.411-.462-4.851-1.272l-5.18 1.366 1.39-5.074c-.927-1.503-1.46-3.267-1.46-5.088 0-5.498 4.471-9.969 9.97-9.969 5.498 0 9.97 4.471 9.97 9.969z"/></svg>
+            <span>Enviar Requerimiento a WhatsApp</span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Action Widget -->
+  <aside aria-label="Contacto directo por WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center gap-2 group">
+    <div class="hidden sm:block bg-white text-brand-navy font-mono text-xs font-bold px-3 py-2 rounded-lg shadow-lg border border-slate-200 group-hover:scale-105 transition-transform">
+      ¿Cotizamos en 2 min?
+    </div>
+    <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20tengo%20consultas%20sobre%20sus%20productos" target="_blank" rel="noopener noreferrer" aria-label="Escribir a WhatsApp CristalesGraf" class="w-14 h-14 bg-brand-whatsapp hover:bg-brand-whatsapp-hover text-slate-950 rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all focus:outline-none focus:ring-4 focus:ring-brand-whatsapp/30">
+      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.772.88 2.792.88 3.183 0 5.77-2.587 5.77-5.766.001-3.183-2.584-5.766-5.77-5.766zm9.969 5.766c0 5.497-4.471 9.968-9.969 9.968-1.758 0-3.411-.462-4.851-1.272l-5.18 1.366 1.39-5.074c-.927-1.503-1.46-3.267-1.46-5.088 0-5.498 4.471-9.969 9.97-9.969 5.498 0 9.97 4.471 9.97 9.969z"/></svg>
+    </a>
+  </aside>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Mobile navigation toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          hamburgerIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
+      });
+    }
+
+    // Filter catalog logic
+    function filterCatalog(category) {
+      const items = document.querySelectorAll('.product-item');
+      const tabs = document.querySelectorAll('.catalog-tab');
+
+      tabs.forEach(t => {
+        t.classList.remove('bg-brand-navy', 'text-white');
+        t.classList.add('bg-slate-100', 'text-slate-700');
+      });
+
+      const activeTab = document.getElementById(`tab-${category}`);
+      if (activeTab) {
+        activeTab.classList.remove('bg-slate-100', 'text-slate-700');
+        activeTab.classList.add('bg-brand-navy', 'text-white');
+      }
+
+      items.forEach(item => {
+        const itemCat = item.getAttribute('data-category');
+        if (category === 'all' || itemCat === category) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+
+    // Modal logic
+    const modal = document.getElementById('product-quote-modal');
+    const modalTitle = document.getElementById('modal-product-title');
+    const modalHidden = document.getElementById('modal-hidden-product');
+
+    function openQuoteModal(productName) {
+      if (modal && modalTitle && modalHidden) {
+        modalTitle.textContent = productName;
+        modalHidden.value = productName;
+        modal.classList.remove('hidden');
+      }
+    }
+
+    function closeQuoteModal() {
+      if (modal) {
+        modal.classList.add('hidden');
+      }
+    }
+
+    // Close on backdrop click
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeQuoteModal();
+        }
+      });
+    }
+
+    function submitModalWhatsApp() {
+      const product = modalHidden.value;
+      const thickness = document.getElementById('modal-thickness').value;
+      const width = document.getElementById('modal-width').value || '2.00';
+      const height = document.getElementById('modal-height').value || '2.10';
+      const district = document.getElementById('modal-district').value || 'Lima';
+
+      const message = `Hola CristalesGraf, deseo cotizar el producto: ${product} con medidas de ${width}m x ${height}m en ${thickness} para el distrito de ${district}. ¿Cuál sería el costo estimado?`;
+      const url = `https://wa.me/51989086972?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+      closeQuoteModal();
+    }
+  </script>
+<!-- impeccable-live-start -->
+<script src="http://localhost:8400/live.js?token=ab200aab-5899-4caf-a50c-72b79c63a1b6"></script>
+<!-- impeccable-live-end -->
+</body>
+</html>

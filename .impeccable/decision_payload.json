@@ -1,0 +1,149 @@
+{
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Ficha de Rectificación y Control Técnico",
+      "kicker": "THE ROLL",
+      "lineage": "Ficha de rectificación milimétrica y control de calidad en obra",
+      "thesis": "El cotizador interactivo como la hoja técnica de obra: precisión al milímetro antes de templar con respaldo formal de taller.",
+      "palette": [
+        "#0f2b48",
+        "#1e293b",
+        "#25d366",
+        "#f8fafc"
+      ],
+      "materials": [
+        "rejilla técnica milimétrica",
+        "vidrio templado translúcido",
+        "aluminio anodizado"
+      ],
+      "viewport": "Hero con autoridad técnica inmediata (+18 años, Limatambo, norma E.040) y cotizador express en primer plano con cálculo directo a WhatsApp.",
+      "risk": "Puede sentirse demasiado técnico si no se destacan claramente los acabados residenciales limpios.",
+      "raised": [
+        {
+          "from": "design-canon-swiss-grid-poster-wall",
+          "raise": "Disciplina de cuadrícula modular para alinear selecciones, medidas y cotas sin saturación visual."
+        },
+        {
+          "from": "rw-manual-acetate-tab-board",
+          "raise": "Capas de superficie translúcidas con sutil relieve para simular paneles de cristal templado."
+        }
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html",
+      "comp": ".impeccable/mocks/decision/assigned.webp"
+    },
+    {
+      "id": "model-pick",
+      "label": "La Mesa de Corte del Vidriero",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Taller de corte y manufactura de vidrio en Los Olivos",
+      "thesis": "La honestidad del taller industrial: herramientas de precisión, perfilería pesada y cristal en proceso.",
+      "palette": [
+        "#0f172a",
+        "#334155",
+        "#10b981",
+        "#f8fafc"
+      ],
+      "materials": [
+        "aluminio extruido negro",
+        "fieltro de corte",
+        "cristal templado 10mm"
+      ],
+      "viewport": "Hero con contraste industrial marcado, selector táctil de productos con esquemas de corte y botón directo a WhatsApp.",
+      "risk": "También es la dirección estética más habitual en talleres industriales modernos.",
+      "html": ".impeccable/mocks/decision/model-pick.html",
+      "comp": ".impeccable/mocks/decision/model-pick.webp"
+    },
+    {
+      "id": "challenger-swiss-grid",
+      "label": "Muro Modular Suizo",
+      "verdict": "competitive",
+      "lineage": "Swiss International Style modular grid",
+      "thesis": "Una cuadrícula arquitectónica pura donde cada módulo contiene una solución, medida o certificación.",
+      "palette": [
+        "#ffffff",
+        "#000000",
+        "#0f2b48",
+        "#25d366"
+      ],
+      "materials": [
+        "rejilla modular blanca",
+        "tipografía técnica objetiva"
+      ],
+      "viewport": "Grid asimétrico con tipografía sólida, selector de medidas en módulos directos y enlaces limpios.",
+      "case": "Organiza las opciones de carpintería y vidrios con impecable orden; pierde algo de calidez residencial.",
+      "risk": "Puede percibirse como un catálogo de arquitectura europeo en lugar de una vidriería accesible en Lima.",
+      "html": ".impeccable/mocks/decision/challenger-swiss-grid.html",
+      "comp": ".impeccable/mocks/decision/challenger-swiss-grid.webp",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-swiss-grid-poster-wall-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/design-canon-swiss-grid-poster-wall.webp"
+    },
+    {
+      "id": "challenger-acetate-tab",
+      "label": "Manual de Fichas de Acetato",
+      "verdict": "declined",
+      "lineage": "boxed-software reference manual tabbed leaves",
+      "palette": [
+        "#fef08a",
+        "#0f172a",
+        "#38bdf8",
+        "#ffffff"
+      ],
+      "materials": [
+        "hojas translúcidas",
+        "pestañas de catálogo"
+      ],
+      "case": "Funde bien con la transparencia del vidrio, pero evoca software antiguo en vez de construcción y obras.",
+      "kept": "Capas translúcidas nítidas en los contenedores del cotizador.",
+      "hero": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board-hero.webp"
+    },
+    {
+      "id": "challenger-exposure-sheets",
+      "label": "Registro de Cuarto Oscuro",
+      "verdict": "declined",
+      "lineage": "darkroom printer's exposure record",
+      "palette": [
+        "#18181b",
+        "#71717a",
+        "#ec4899",
+        "#fafafa"
+      ],
+      "materials": [
+        "escala de zonas",
+        "trazos milimétricos"
+      ],
+      "case": "El lenguaje fotográfico de cuarto oscuro no conecta con el comprador de mamparas ni con el maestro de obra.",
+      "kept": "Tablas de medidas con números monoespaciados de alta precisión.",
+      "hero": "https://impeccable.style/worlds/cards/operate-b-exposure-record-zone-sheets-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": true
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "El Estándar Comercial de Vidriería",
+    "thesis": "El diseño tradicional de vidriería comercial con foto de portada y llamada básica a cotizar.",
+    "palette": [
+      "#ffffff",
+      "#0f2b48",
+      "#2563eb"
+    ],
+    "materials": [
+      "fondo blanco limpio",
+      "fotos de stock"
+    ],
+    "viewport": "Banner con foto de ambiente residencial, título comercial y botones genéricos de contacto.",
+    "risk": "Indistinguible de la competencia por diseño; no transmite la precisión técnica ni la autoridad de taller propio.",
+    "html": ".impeccable/mocks/decision/canon.html",
+    "comp": ".impeccable/mocks/decision/canon.webp"
+  },
+  "steer": true
+}

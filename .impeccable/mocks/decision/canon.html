@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CristalesGraf - Vidriería en Lima</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 1440px; height: 900px; overflow: hidden;
+      background-color: #ffffff; color: #1e293b;
+      font-family: 'Inter', sans-serif;
+    }
+    header {
+      height: 80px; padding: 0 60px; display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid #e2e8f0; background: #ffffff;
+    }
+    .brand { font-size: 24px; font-weight: 700; color: #0f2b48; }
+    .brand span { color: #2563eb; }
+    nav a { text-decoration: none; color: #475569; font-size: 15px; font-weight: 500; margin-left: 32px; }
+    .btn-header { background: #2563eb; color: #ffffff; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; margin-left: 32px; }
+    .hero {
+      padding: 80px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    h1 { font-size: 48px; font-weight: 700; line-height: 1.15; color: #0f172a; margin-bottom: 20px; }
+    p.lead { font-size: 18px; line-height: 1.6; color: #64748b; margin-bottom: 32px; }
+    .cta-row { display: flex; gap: 16px; margin-bottom: 48px; }
+    .btn-primary { background: #25d366; color: #ffffff; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 16px; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .btn-secondary { background: #f1f5f9; color: #334155; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 16px; text-decoration: none; }
+    .features-row { display: flex; gap: 32px; border-top: 1px solid #e2e8f0; padding-top: 32px; }
+    .feature h4 { font-size: 18px; font-weight: 700; color: #0f172a; }
+    .feature p { font-size: 13px; color: #64748b; margin-top: 4px; }
+    .hero-img-box {
+      height: 480px; background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+      border-radius: 16px; display: flex; flex-direction: column; justify-content: center; align-items: center;
+      border: 1px solid #cbd5e1; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); padding: 40px; text-align: center;
+    }
+    .hero-img-box h3 { font-size: 24px; color: #0369a1; font-weight: 700; margin-bottom: 12px; }
+    .hero-img-box p { font-size: 15px; color: #0284c7; max-width: 320px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Cristales<span>Graf</span></div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Productos</a>
+      <a href="#">Proyectos</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Contacto</a>
+      <a href="#" class="btn-header">Cotizar Ahora</a>
+    </nav>
+  </header>
+  <main class="hero">
+    <div>
+      <h1>Expertos en Vidrio Templado y Aluminios para su Hogar y Negocio</h1>
+      <p class="lead">Soluciones modernas y seguras en mamparas, ventanas, barandas y cerramientos con la mejor calidad en Lima Norte y Lima Metropolitana.</p>
+      <div class="cta-row">
+        <a href="#" class="btn-primary">Cotizar por WhatsApp</a>
+        <a href="#" class="btn-secondary">Ver Catálogo</a>
+      </div>
+      <div class="features-row">
+        <div class="feature">
+          <h4>+18 Años</h4>
+          <p>Experiencia comprobada</p>
+        </div>
+        <div class="feature">
+          <h4>Garantía 100%</h4>
+          <p>Vidrios de seguridad</p>
+        </div>
+        <div class="feature">
+          <h4>Puntualidad</h4>
+          <p>Entregas e instalación a tiempo</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-img-box">
+      <h3>Mamparas y Fachadas</h3>
+      <p>Catálogo residencial y comercial con instalación profesional en Lima</p>
+    </div>
+  </main>
+</body>
+</html>

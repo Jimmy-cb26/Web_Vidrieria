@@ -1,0 +1,6 @@
+{
+  "files": ["index.html", "productos.html", "proyectos.html", "nosotros.html", "contacto.html"],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "cspChecked": true
+}

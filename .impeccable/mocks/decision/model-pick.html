@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CristalesGraf - Mesa de Corte del Vidriero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 1440px; height: 900px; overflow: hidden;
+      background-color: #0b0f19; color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    header {
+      height: 76px; padding: 0 56px; display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid #1e293b; background: #0f172a;
+    }
+    .brand { font-weight: 800; font-size: 26px; color: #ffffff; letter-spacing: -0.5px; }
+    .brand span { color: #10b981; }
+    .nav-links a { color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 600; margin-left: 28px; }
+    .hero {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px;
+      padding: 64px 56px 0 56px; height: calc(900px - 76px);
+    }
+    .tag { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #10b981; font-weight: 700; text-transform: uppercase; margin-bottom: 16px; display: inline-block; padding: 4px 10px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 4px; }
+    h1 { font-size: 54px; line-height: 1.06; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 24px; color: #ffffff; }
+    h1 span { color: #38bdf8; }
+    p.lead { font-size: 18px; line-height: 1.5; color: #94a3b8; margin-bottom: 36px; max-width: 560px; }
+    .workshop-strip { display: flex; gap: 32px; border-top: 1px solid #1e293b; padding-top: 32px; }
+    .strip-item h4 { font-size: 28px; font-weight: 800; color: #10b981; font-family: 'JetBrains Mono', monospace; }
+    .strip-item p { font-size: 13px; color: #64748b; margin-top: 4px; }
+    .calc-box {
+      background: #111827; border: 1px solid #334155; border-radius: 8px; padding: 36px;
+      display: flex; flex-direction: column; box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .calc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; border-bottom: 1px solid #1e293b; padding-bottom: 16px; }
+    .calc-header h3 { font-size: 20px; font-weight: 700; color: #ffffff; }
+    .calc-body { display: flex; flex-direction: column; gap: 18px; }
+    .calc-label { font-size: 12px; text-transform: uppercase; font-weight: 700; color: #94a3b8; font-family: 'JetBrains Mono', monospace; }
+    .grid-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .opt-btn { padding: 12px; text-align: center; background: #1e293b; border: 1px solid #334155; border-radius: 6px; font-size: 13px; font-weight: 600; color: #cbd5e1; }
+    .opt-btn.active { background: #10b981; color: #022c22; font-weight: 800; border-color: #10b981; }
+    .dim-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .dim-box { background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 12px 16px; font-size: 14px; color: #f1f5f9; }
+    .btn-submit {
+      margin-top: auto; padding: 16px; background: #10b981; color: #022c22; font-weight: 800; font-size: 15px;
+      border-radius: 6px; text-align: center; border: none; letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">CRISTALES<span>GRAF</span></div>
+    <div class="nav-links">
+      <a href="#">Soluciones</a>
+      <a href="#">Obras</a>
+      <a href="#">Taller</a>
+      <a href="#">Contacto</a>
+      <a href="#" style="background: #10b981; color: #022c22; padding: 8px 16px; border-radius: 4px; font-weight: 700;">+51 989 086 972</a>
+    </div>
+  </header>
+  <main class="hero">
+    <div>
+      <span class="tag">Taller &middot; Av. Tomás Valle 1102</span>
+      <h1>Manufactura Directa en <span>Cristal Templado</span> y Aluminio Pesado.</h1>
+      <p class="lead">Corte de precisión, perfilería estructural y montaje en obra. Precios de taller directo en Lima sin sobrecostos de intermediarios.</p>
+      <div class="workshop-strip">
+        <div class="strip-item">
+          <h4>18+ AÑOS</h4>
+          <p>Taller Propio en Lima Norte</p>
+        </div>
+        <div class="strip-item">
+          <h4>LIMATAMBO</h4>
+          <p>Proveedor Primario Certificado</p>
+        </div>
+        <div class="strip-item">
+          <h4>E.040</h4>
+          <p>Norma Técnica Peruana</p>
+        </div>
+      </div>
+    </div>
+    <div class="calc-box">
+      <div class="calc-header">
+        <h3>Cotizador de Taller Express</h3>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #10b981;">EN LÍNEA</span>
+      </div>
+      <div class="calc-body">
+        <div>
+          <div class="calc-label">Seleccione Requerimiento</div>
+          <div class="grid-options" style="margin-top: 6px;">
+            <div class="opt-btn active">Mamparas</div>
+            <div class="opt-btn">Duchas</div>
+            <div class="opt-btn">Muro Cortina</div>
+          </div>
+        </div>
+        <div>
+          <div class="calc-label">Espesor Técnico</div>
+          <div class="grid-options" style="margin-top: 6px;">
+            <div class="opt-btn">6 mm</div>
+            <div class="opt-btn active">8 mm Templado</div>
+            <div class="opt-btn">10 mm</div>
+          </div>
+        </div>
+        <div>
+          <div class="calc-label">Dimensiones Estimadas</div>
+          <div class="dim-inputs" style="margin-top: 6px;">
+            <div class="dim-box">Ancho: 2.50 m</div>
+            <div class="dim-box">Alto: 2.10 m</div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-submit" style="margin-top: 24px;">
+        SOLICITAR COTIZACIÓN POR WHATSAPP
+      </div>
+    </div>
+  </main>
+</body>
+</html>

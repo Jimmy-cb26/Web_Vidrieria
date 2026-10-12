@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-12T12:28:30Z",
+  "title": "Design System: CristalesGraf",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Azul Corporativo CristalesGraf",
+        "canonical": "#00529c",
+        "tonalRamp": ["#001a35", "#002d5a", "#00529c", "#0066b8", "#1a7ed9", "#4da3e9", "#99cbfa", "#e0f0fd"]
+      },
+      "accent-cyan": {
+        "role": "secondary",
+        "displayName": "Cyan Cristal Luminoso",
+        "canonical": "#00b4d8",
+        "tonalRamp": ["#00384d", "#006b8f", "#0096c7", "#00b4d8", "#38cbe6", "#7ae0f2", "#b8f1fa", "#e0f8fd"]
+      },
+      "accent-action": {
+        "role": "secondary",
+        "displayName": "Verde Esmeralda WhatsApp",
+        "canonical": "#25d366",
+        "tonalRamp": ["#073517", "#0d5d29", "#16a34a", "#25d366", "#4ade80", "#86efac", "#bbf7d0", "#f0fdf4"]
+      },
+      "neutral-dark": {
+        "role": "neutral",
+        "displayName": "Pizarra Obra / Perfilería",
+        "canonical": "#0f172a",
+        "tonalRamp": ["#000000", "#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1"]
+      },
+      "neutral-bg": {
+        "role": "neutral",
+        "displayName": "Blanco Técnico Taller",
+        "canonical": "#f8fafc",
+        "tonalRamp": ["#334155", "#64748b", "#94a3b8", "#cbd5e1", "#e2e8f0", "#f1f5f9", "#f8fafc", "#ffffff"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Space Grotesk",
+        "purpose": "Titular de autoridad principal de la cabecera."
+      },
+      "headline": {
+        "displayName": "Headline Space Grotesk",
+        "purpose": "Encabezados principales de soluciones y procesos."
+      },
+      "body": {
+        "displayName": "Body IBM Plex Sans",
+        "purpose": "Textos explicativos técnicos y descripciones."
+      },
+      "label": {
+        "displayName": "Label IBM Plex Mono",
+        "purpose": "Medidas, cotas, espesores y teléfonos directos."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-depth",
+        "value": "0 4px 6px -1px rgba(0, 82, 156, 0.08)",
+        "purpose": "Elevación sutil para el cotizador express."
+      },
+      {
+        "name": "floating-action",
+        "value": "0 10px 15px -3px rgba(37, 211, 102, 0.3)",
+        "purpose": "Resplandor suave para el botón flotante de WhatsApp."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Transición estándar de estados interactivos y navegación."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "WhatsApp CTA Button",
+      "kind": "button",
+      "refersTo": "button-whatsapp",
+      "description": "Botón de acción primaria para enviar cotización compilada a WhatsApp.",
+      "html": "<button class=\"ds-btn-wa\"><svg width=\"18\" height=\"18\" fill=\"currentColor\" viewBox=\"0 0 24 24\"><path d=\"M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.772.88 2.792.88 3.183 0 5.77-2.587 5.77-5.766.001-3.183-2.584-5.766-5.77-5.766zm9.969 5.766c0 5.497-4.471 9.968-9.969 9.968-1.758 0-3.411-.462-4.851-1.272l-5.18 1.366 1.39-5.074c-.927-1.503-1.46-3.267-1.46-5.088 0-5.498 4.471-9.969 9.97-9.969 5.498 0 9.97 4.471 9.97 9.969z\"/></svg><span>ENVIAR A WHATSAPP</span></button>",
+      "css": ".ds-btn-wa { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #25d366; color: #0f172a; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; text-transform: uppercase; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; transition: background 0.15s ease; } .ds-btn-wa:hover { background: #16a34a; } .ds-btn-wa:focus-visible { outline: 2px solid #00529c; outline-offset: 2px; }"
+    },
+    {
+      "name": "Primary Taller Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Botón de acción institucional para navegación y anclaje al cotizador.",
+      "html": "<button class=\"ds-btn-primary\">Cotizador Express</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: #00529c; color: #ffffff; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; text-transform: uppercase; padding: 10px 18px; border: none; border-radius: 4px; cursor: pointer; transition: background 0.15s ease; } .ds-btn-primary:hover { background: #0066b8; }"
+    },
+    {
+      "name": "Measurement Input",
+      "kind": "input",
+      "description": "Campo de entrada numérico para medidas de obra en metros.",
+      "html": "<div class=\"ds-input-group\"><input type=\"number\" class=\"ds-input\" placeholder=\"2.40\" step=\"0.01\"><span class=\"ds-unit\">m</span></div>",
+      "css": ".ds-input-group { position: relative; width: 100%; } .ds-input { width: 100%; height: 44px; padding: 0 32px 0 12px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 3px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #0f172a; } .ds-input:focus { outline: 2px solid #00529c; outline-offset: 1px; } .ds-unit { position: absolute; right: 12px; top: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #64748b; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "La Ficha de Rectificación y Control Técnico",
+    "overview": "El lenguaje visual de CristalesGraf rechaza el catálogo comercial genérico de fotos de stock y degradados vacíos. Está inspirado en la honestidad del taller industrial de manufactura y en el cuaderno de obra del contratista en Lima: líneas de ensamble limpias, perfiles de aluminio extruido, cristal templado translúcido y la precisión milimétrica requerida antes del templado térmico bajo la Norma Técnica Peruana E.040.\n\nLa experiencia prioriza la claridad técnica, la autoridad inmediata (+18 años en Los Olivos, respaldo de Corporación Limatambo) y la reducción total de fricción en la cotización mediante componentes interactivos que enrutan datos precalificados directamente a WhatsApp.",
+    "keyCharacteristics": [
+      "Autoridad sobria y técnica sobre fondos limpios de taller (#f8fafc)",
+      "Contraste institucional contundente en Azul Corporativo (#00529c) y Cyan Cristal (#00b4d8) extraídos de logo.png con acentos de conversión en verde esmeralda WhatsApp (#25d366)",
+      "Tipografía dual: geometría sólida para encabezados (Space Grotesk), lectura clara para cuerpo (IBM Plex Sans) y notación tabular para cotas (IBM Plex Mono)",
+      "Contenedores limpios sin anidamientos innecesarios ni tarjetas dentro de tarjetas"
+    ],
+    "rules": [
+      {
+        "name": "The WhatsApp Action Rule",
+        "body": "El verde #25d366 solo se utiliza en elementos que inician o conducen a una conversación directa de cotización en WhatsApp; nunca se emplea como fondo decorativo general.",
+        "section": "colors"
+      },
+      {
+        "name": "The Contrast Rule",
+        "body": "Ningún texto de cuerpo o medición puede tener un ratio de contraste inferior a 4.5:1 frente a su superficie contenedora.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Measurement Rule",
+        "body": "Toda cota, dimensión (ancho x alto), espesor de vidrio o cifra numérica de obra se renderiza en IBM Plex Mono para garantizar alineación visual y legibilidad milimétrica.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Structure Rule",
+        "body": "La delimitación entre secciones y módulos se logra mediante bordes nítidos de 1px a 2px y alternancia de fondos neutros, nunca mediante apilamiento de sombras.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do expresar consistentemente la trayectoria de CristalesGraf como '+18 años de experiencia'.",
+      "Do indicar el cumplimiento de la Norma Técnica Peruana de Vidrio E.040 y el respaldo de Corporación Limatambo.",
+      "Do usar IBM Plex Mono para medidas en metros, espesores en milímetros y números de teléfono.",
+      "Do mantener todas las áreas de toque interactivas por encima de 44x44px."
+    ],
+    "donts": [
+      "Don't reintroducir fondos con patrones de cuadrículas o gradientes artificiales no justificados.",
+      "Don't anidar tarjetas dentro de tarjetas; usar líneas divisorias o espaciado tipográfico.",
+      "Don't usar el verde de WhatsApp #25d366 para elementos decorativos sin acción a chat.",
+      "Don't usar emojis o glifos Unicode genéricos en lugar de iconos vectoriales SVG limpios."
+    ]
+  }
+}
