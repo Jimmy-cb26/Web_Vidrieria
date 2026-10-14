@@ -12,6 +12,9 @@
   <meta property="og:type" content="website">
 
   <!-- Google Fonts: Space Grotesk + IBM Plex Sans + IBM Plex Mono -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -113,6 +116,12 @@
         scroll-behavior: auto !important;
       }
     }
+
+    /* Off-screen Rendering Optimization (Core Web Vitals) */
+    .content-auto {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 600px;
+    }
   </style>
 </head>
 <body class="bg-brand-surface text-slate-900 font-sans antialiased selection:bg-brand-navy selection:text-white">
@@ -128,7 +137,7 @@
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-navy py-1" aria-label="CristalesGraf - Inicio">
-        <img src="logo.png" alt="CristalesGraf - Vidrios y Aluminios" class="h-11 sm:h-12 md:h-14 w-auto object-contain">
+        <img src="logo.png" alt="CristalesGraf - Vidrios y Aluminios" width="420" height="110" fetchpriority="high" class="h-11 sm:h-12 md:h-14 w-auto object-contain">
       </a>
 
       <!-- Desktop Nav -->
@@ -238,7 +247,7 @@
         
         <div class="lg:col-span-5 border border-slate-300 bg-white rounded p-8">
           <div class="aspect-video w-full overflow-hidden rounded bg-slate-100 mb-6 border border-slate-200">
-            <img src="assets/img/fachadas/fachada-obra-taller.jpg" alt="Instalaciones y Taller CristalesGraf en Los Olivos" class="w-full h-full object-cover" loading="lazy">
+            <img src="assets/img/fachadas/fachada-obra-taller.jpg" alt="Instalaciones y Taller CristalesGraf en Los Olivos" class="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="338">
           </div>
           <span class="font-mono text-xs font-bold text-brand-navy uppercase block mb-2">Fundación y Trayectoria</span>
           <h2 class="font-display text-brand-navy mb-4">
@@ -424,7 +433,7 @@
         <!-- Partner 1: Limatambo -->
         <div class="bg-white border border-slate-300 rounded p-6 flex flex-col items-center text-center hover:border-brand-navy transition">
           <div class="h-14 flex items-center justify-center mb-3">
-            <img src="assets/img/marcas/logo-corporacion-limatambo.png" alt="Corporación Limatambo - Cristal Templado Certificado" class="max-h-12 w-auto object-contain" loading="lazy">
+            <img src="assets/img/marcas/logo-corporacion-limatambo.png" alt="Corporación Limatambo - Cristal Templado Certificado" class="max-h-12 w-auto object-contain" loading="lazy" decoding="async" width="305" height="81">
           </div>
           <span class="font-display text-sm font-bold text-brand-navy">Corporación Limatambo</span>
           <p class="text-xs text-slate-600 mt-1">Cristal templado y procesado de seguridad de alta precisión.</p>
@@ -433,7 +442,7 @@
         <!-- Partner 2: ARclad -->
         <div class="bg-white border border-slate-300 rounded p-6 flex flex-col items-center text-center hover:border-brand-navy transition">
           <div class="h-14 flex items-center justify-center mb-3">
-            <img src="assets/img/marcas/logo-arclad.png" alt="ARclad - Láminas y Viniles de Seguridad" class="max-h-12 w-auto object-contain" loading="lazy">
+            <img src="assets/img/marcas/logo-arclad.png" alt="ARclad - Láminas y Viniles de Seguridad" class="max-h-12 w-auto object-contain" loading="lazy" decoding="async" width="1000" height="261">
           </div>
           <span class="font-display text-sm font-bold text-brand-navy">ARclad</span>
           <p class="text-xs text-slate-600 mt-1">Láminas de seguridad, control solar y películas arquitectónicas.</p>

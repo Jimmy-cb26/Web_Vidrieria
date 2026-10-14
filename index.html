@@ -12,6 +12,9 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_PE">
 
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -149,6 +152,12 @@
       }
     }
 
+
+    /* Off-screen Rendering Optimization (Core Web Vitals) */
+    .content-auto {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 600px;
+    }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand-navy selection:text-white">
@@ -165,7 +174,7 @@
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center group py-1" aria-label="CristalesGraf - Inicio">
-        <img src="logo.png" alt="CristalesGraf - Vidrios y Aluminios" class="h-11 sm:h-12 md:h-14 w-auto object-contain">
+        <img src="logo.png" alt="CristalesGraf - Vidrios y Aluminios" width="420" height="110" fetchpriority="high" class="h-11 sm:h-12 md:h-14 w-auto object-contain">
       </a>
 
       <!-- Desktop Navigation -->
@@ -414,7 +423,7 @@
           <div class="glass-craft border border-slate-200 p-5 rounded-lg flex flex-col justify-between hover:border-brand-navy hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white shadow-sm group">
             <div>
               <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
-                <img src="assets/img/mamparas/mampara-serie-80.jpg" alt="Mampara Corrediza Serie 25 y 38 CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                <img src="assets/img/mamparas/mampara-serie-80.jpg" alt="Mampara Corrediza Serie 25 y 38 CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="600" height="338">
               </div>
               <span class="font-mono text-xs font-bold text-brand-navy block mb-1">SERIE 25 Y 38</span>
               <h3 class="font-display text-brand-navy text-lg font-bold mb-2">Mamparas Corredizas</h3>
@@ -430,7 +439,7 @@
           <div class="glass-craft border border-slate-200 p-5 rounded-lg flex flex-col justify-between hover:border-brand-navy hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white shadow-sm group">
             <div>
               <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
-                <img src="assets/img/duchas/ducha-euro-doble-batiente.jpg" alt="Puerta de Ducha en Acero Inoxidable CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                <img src="assets/img/duchas/ducha-euro-doble-batiente.jpg" alt="Puerta de Ducha en Acero Inoxidable CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="600" height="338">
               </div>
               <span class="font-mono text-xs font-bold text-brand-navy block mb-1">ACERO INOX 304</span>
               <h3 class="font-display text-brand-navy text-lg font-bold mb-2">Puertas de Ducha</h3>
@@ -446,7 +455,7 @@
           <div class="glass-craft border border-slate-200 p-5 rounded-lg flex flex-col justify-between hover:border-brand-navy hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white shadow-sm group">
             <div>
               <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
-                <img src="assets/img/fachadas/muro-cortina-comercial.png" alt="Muro Cortina y Fachada Integral CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                <img src="assets/img/fachadas/muro-cortina-comercial.png" alt="Muro Cortina y Fachada Integral CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="600" height="338">
               </div>
               <span class="font-mono text-xs font-bold text-brand-navy block mb-1">CORPORATIVO</span>
               <h3 class="font-display text-brand-navy text-lg font-bold mb-2">Muros Cortina</h3>
@@ -462,7 +471,7 @@
           <div class="glass-craft border border-slate-200 p-5 rounded-lg flex flex-col justify-between hover:border-brand-navy hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white shadow-sm group">
             <div>
               <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
-                <img src="assets/img/barandas/baranda-vidrio-aluminio.jpg" alt="Baranda de Cristal de Seguridad CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                <img src="assets/img/barandas/baranda-vidrio-aluminio.jpg" alt="Baranda de Cristal de Seguridad CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="600" height="338">
               </div>
               <span class="font-mono text-xs font-bold text-brand-navy block mb-1">SEGURIDAD RNE</span>
               <h3 class="font-display text-brand-navy text-lg font-bold mb-2">Barandas de Cristal</h3>
@@ -530,11 +539,11 @@
         </div>
         <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-90">
           <div class="flex items-center gap-3">
-            <img src="assets/img/marcas/logo-corporacion-limatambo.png" alt="Corporación Limatambo - Cristal Templado" class="h-9 sm:h-11 w-auto object-contain" loading="lazy">
+            <img src="assets/img/marcas/logo-corporacion-limatambo.png" alt="Corporación Limatambo - Cristal Templado" class="h-9 sm:h-11 w-auto object-contain" loading="lazy" decoding="async" width="305" height="81">
             <span class="font-mono text-xs font-bold text-slate-700">Cristal Templado de Seguridad</span>
           </div>
           <div class="flex items-center gap-3">
-            <img src="assets/img/marcas/logo-arclad.png" alt="ARclad - Selladores y Láminas de Seguridad" class="h-7 sm:h-9 w-auto object-contain" loading="lazy">
+            <img src="assets/img/marcas/logo-arclad.png" alt="ARclad - Selladores y Láminas de Seguridad" class="h-7 sm:h-9 w-auto object-contain" loading="lazy" decoding="async" width="1000" height="261">
             <span class="font-mono text-xs font-bold text-slate-700">Selladores Estructurales</span>
           </div>
           <div class="flex items-center gap-2 px-3 py-1.5 border border-slate-300 rounded font-mono text-xs text-brand-navy font-bold">

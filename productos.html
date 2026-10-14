@@ -12,6 +12,9 @@
   <meta property="og:type" content="website">
 
   <!-- Google Fonts: Space Grotesk + IBM Plex Sans + IBM Plex Mono -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -139,6 +142,12 @@
         scroll-behavior: auto !important;
       }
     }
+
+    /* Off-screen Rendering Optimization (Core Web Vitals) */
+    .content-auto {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 600px;
+    }
   </style>
 </head>
 <body class="bg-brand-surface text-slate-900 font-sans antialiased selection:bg-brand-navy selection:text-white">
@@ -154,7 +163,7 @@
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-navy py-1" aria-label="CristalesGraf - Inicio">
-        <img src="logo.png" alt="CristalesGraf - Vidrios y Aluminios" class="h-11 sm:h-12 md:h-14 w-auto object-contain">
+        <img src="logo.png" alt="CristalesGraf - Vidrios y Aluminios" width="420" height="110" fetchpriority="high" class="h-11 sm:h-12 md:h-14 w-auto object-contain">
       </a>
 
       <!-- Desktop Nav -->
@@ -256,7 +265,7 @@
         <article class="product-item glass-craft group bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300" data-category="residencial">
           <div>
             <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
-              <img src="assets/img/mamparas/mampara-apilable.jpg" alt="Mampara Corrediza de Terraza y Sala CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <img src="assets/img/mamparas/mampara-apilable.jpg" alt="Mampara Corrediza de Terraza y Sala CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="600" height="338">
             </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
               <span class="font-mono text-xs font-bold text-brand-navy">SERIE 25 / 38</span>
@@ -283,7 +292,7 @@
         <article class="product-item glass-craft group bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300" data-category="residencial">
           <div>
             <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
-              <img src="assets/img/duchas/ducha-euro-black.jpg" alt="Puertas de Ducha Templadas Suspendidas CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <img src="assets/img/duchas/ducha-euro-black.jpg" alt="Puertas de Ducha Templadas Suspendidas CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="600" height="338">
             </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
               <span class="font-mono text-xs font-bold text-brand-navy">ACERO INOX 304</span>
@@ -310,7 +319,7 @@
         <article class="product-item glass-craft group bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300" data-category="residencial">
           <div>
             <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
-              <img src="assets/img/ventanas/ventana-sistema-nova.jpg" alt="Ventanas Antirruido y Cierre Hermético CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <img src="assets/img/ventanas/ventana-sistema-nova.jpg" alt="Ventanas Antirruido y Cierre Hermético CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="600" height="338">
             </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
               <span class="font-mono text-xs font-bold text-brand-navy">AISLAMIENTO 75%</span>
@@ -337,7 +346,7 @@
         <article class="product-item glass-craft group bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300" data-category="residencial">
           <div>
             <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
-              <img src="assets/img/barandas/baranda-vidrio-aluminio.jpg" alt="Barandas para Balcón y Escaleras CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <img src="assets/img/barandas/baranda-vidrio-aluminio.jpg" alt="Barandas para Balcón y Escaleras CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="600" height="338">
             </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
               <span class="font-mono text-xs font-bold text-brand-navy">SEGURIDAD E.040</span>
@@ -364,7 +373,7 @@
         <article class="product-item glass-craft group bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300" data-category="comercial">
           <div>
             <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
-              <img src="assets/img/fachadas/muro-cortina-edificio.jpg" alt="Muros Cortina y Fachadas Suspendidas CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <img src="assets/img/fachadas/muro-cortina-edificio.jpg" alt="Muros Cortina y Fachadas Suspendidas CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="600" height="338">
             </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
               <span class="font-mono text-xs font-bold text-brand-navy">INGENIERÍA ESTRUCTURAL</span>
@@ -391,7 +400,7 @@
         <article class="product-item glass-craft group bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300" data-category="comercial">
           <div>
             <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
-              <img src="assets/img/proyectos/obra-puerta-vaiven.jpg" alt="Frentes de Tienda y Vitrinas Comerciales CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <img src="assets/img/proyectos/obra-puerta-vaiven.jpg" alt="Frentes de Tienda y Vitrinas Comerciales CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="600" height="338">
             </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
               <span class="font-mono text-xs font-bold text-brand-navy">ALTO TRÁNSITO</span>
@@ -418,7 +427,7 @@
         <article class="product-item glass-craft group bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300" data-category="comercial">
           <div>
             <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
-              <img src="assets/img/mamparas/mampara-plegable.jpg" alt="Divisiones de Oficina y Directorios CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <img src="assets/img/mamparas/mampara-plegable.jpg" alt="Divisiones de Oficina y Directorios CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="600" height="338">
             </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
               <span class="font-mono text-xs font-bold text-brand-navy">LÍNEA CORPORATIVA</span>
@@ -445,7 +454,7 @@
         <article class="product-item glass-craft group bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300" data-category="comercial">
           <div>
             <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
-              <img src="assets/img/techos/techo-arquitectonico-01.jpg" alt="Techos en Policarbonato y Cristal Estructural CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <img src="assets/img/techos/techo-arquitectonico-01.jpg" alt="Techos en Policarbonato y Cristal Estructural CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width="600" height="338">
             </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
               <span class="font-mono text-xs font-bold text-brand-navy">COBERTURA EXTERIOR</span>
