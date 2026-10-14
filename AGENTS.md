@@ -88,6 +88,7 @@ La identidad visual está normada en [DESIGN.md](DESIGN.md) y derivada fielmente
    - Usar siempre atributos `loading="lazy"` y `alt` descriptivos en imágenes de catálogo o proyectos.
    - Preservar el logotipo corporativo [logo.png](logo.png) en la barra de navegación superior.
 4. **Áreas Táctiles Móviles:** Todos los botones, enlaces interactivos y campos de formulario deben contar con una altura mínima de `44px` para compatibilidad móvil en obra.
+5. **Control de Versiones y GitHub (Regla Inviolable):** Queda **estrictamente prohibido** ejecutar `git push` o subir cualquier cambio al repositorio remoto de GitHub a menos que el usuario lo autorice o solicite de forma explícita y directa. Todo trabajo se mantendrá local en el entorno de desarrollo.
 
 ---
 
