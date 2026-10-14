@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/fachadas/hero-bg-cristalesgraf.webp" fetchpriority="high">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -138,9 +139,24 @@
       animation: calcPulse 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
+    /* Motion accessibility: Respect users with vestibular motion sensitivity */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand-navy selection:text-white">
+
+  <!-- Accessible Skip Link (WCAG 2.4.1) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-navy focus:text-white focus:font-mono focus:text-xs focus:font-bold focus:rounded focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-brand-cyan">
+    Saltar al contenido principal
+  </a>
 
 
   <!-- Sticky Main Header -->
@@ -204,7 +220,7 @@
   </header>
 
   <!-- Hero with Cotizador as Central Conversion Protagonist -->
-  <main>
+  <main id="main-content">
     <section class="relative min-h-[680px] lg:min-h-[760px] flex items-center border-b border-slate-200 overflow-hidden bg-slate-950">
       
       <!-- Architectural Glass Photo Hero Backdrop (Mirrored: Windows on Left, Sea on Right) -->

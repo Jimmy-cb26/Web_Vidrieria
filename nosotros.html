@@ -104,10 +104,23 @@
       outline: 2px solid #00529c;
       outline-offset: 2px;
     }
+    /* Motion accessibility: Respect users with vestibular motion sensitivity */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
   </style>
 </head>
 <body class="bg-brand-surface text-slate-900 font-sans antialiased selection:bg-brand-navy selection:text-white">
 
+  <!-- Accessible Skip Link (WCAG 2.4.1) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-navy focus:text-white focus:font-mono focus:text-xs focus:font-bold focus:rounded focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-brand-cyan">
+    Saltar al contenido principal
+  </a>
 
   <!-- Global Header -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 transition-all">
@@ -217,7 +230,7 @@
   </section>
 
   <!-- Main Content: Historia y Diferenciadores -->
-  <main class="py-16 sm:py-24 bg-brand-surface border-b border-slate-200">
+  <main id="main-content" class="py-16 sm:py-24 bg-brand-surface border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       
       <!-- Bloque 1: Historia del Taller -->
