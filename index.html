@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es-PE" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>CristalesGraf | Vidrio Templado y Carpintería de Aluminio en Lima - Cotizador Directo</title>
   <meta name="description" content="Cotiza mamparas corredizas, puertas de ducha, barandas y fachadas de vidrio templado en 30 segundos. Taller directo en Los Olivos, +18 años de trayectoria y Norma E.040.">
   <meta name="keywords" content="vidrieria lima, vidrio templado los olivos, cotizador mamparas lima, puertas de ducha cristal templado, muros cortina lima, cristalesgraf tomas valle">
@@ -101,6 +101,43 @@
       outline: 2px solid #00529c;
       outline-offset: 2px;
     }
+
+    /* Glass Light Sheen Effect on Cards */
+    .glass-craft {
+      position: relative;
+      overflow: hidden;
+    }
+    .glass-craft::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -120%;
+      width: 60%;
+      height: 200%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.45),
+        transparent
+      );
+      transform: rotate(25deg);
+      transition: left 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+    .glass-craft:hover::after {
+      left: 140%;
+    }
+
+    /* Calculation metric pulse */
+    @keyframes calcPulse {
+      0% { transform: scale(0.96); opacity: 0.8; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .calc-pulsing {
+      animation: calcPulse 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand-navy selection:text-white">
@@ -124,207 +161,223 @@
         <a href="contacto.html" class="hover:text-brand-navy transition py-1">Contacto</a>
       </nav>
 
-      <!-- Header CTAs -->
+      <!-- Header CTAs & Mobile Button -->
       <div class="flex items-center gap-3">
-        <a href="#cotizador-express" class="hidden sm:inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider px-3.5 py-2.5 rounded transition">
+        <a href="#cotizador-express" class="hidden sm:inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider px-3.5 py-2.5 rounded transition min-h-[44px]">
           Cotizador Express
         </a>
-        <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20deseo%20cotizar%20un%20proyecto%20urgente" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsapp-hover text-slate-950 font-mono text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded shadow transition">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.772.88 2.792.88 3.183 0 5.77-2.587 5.77-5.766.001-3.183-2.584-5.766-5.77-5.766zm9.969 5.766c0 5.497-4.471 9.968-9.969 9.968-1.758 0-3.411-.462-4.851-1.272l-5.18 1.366 1.39-5.074c-.927-1.503-1.46-3.267-1.46-5.088 0-5.498 4.471-9.969 9.97-9.969 5.498 0 9.97 4.471 9.97 9.969z"/></svg>
+        <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20deseo%20cotizar%20un%20proyecto%20urgente" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsapp-hover text-slate-950 font-mono text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded shadow transition min-h-[44px]">
+          <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           <span class="hidden md:inline">WhatsApp</span>
         </a>
+
+        <!-- Mobile Navigation Toggle Button -->
+        <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2.5 text-slate-700 hover:text-brand-navy rounded-md min-h-[44px] min-w-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-brand-navy">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
       </div>
 
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2">
+      <a href="index.html" class="block py-3 text-base font-semibold text-brand-navy border-l-4 border-brand-navy pl-3 min-h-[44px] flex items-center">Inicio</a>
+      <a href="productos.html" class="block py-3 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3 min-h-[44px] flex items-center">Soluciones y Catálogo</a>
+      <a href="proyectos.html" class="block py-3 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3 min-h-[44px] flex items-center">Obras Ejecutadas</a>
+      <a href="nosotros.html" class="block py-3 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3 min-h-[44px] flex items-center">Nosotros y Taller</a>
+      <a href="contacto.html" class="block py-3 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3 min-h-[44px] flex items-center">Contacto y Ubicación</a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <a href="#cotizador-express" onclick="closeMobileMenu()" class="w-full inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider py-3.5 rounded transition min-h-[44px]">
+          Ir al Cotizador Express
+        </a>
+        <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20deseo%20cotizar%20un%20proyecto%20urgente" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-brand-whatsapp hover:bg-brand-whatsapp-hover active:scale-[0.98] text-slate-950 font-mono text-sm font-bold py-3.5 rounded min-h-[44px] flex items-center justify-center gap-2 transition">
+          <svg class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          COTIZAR POR WHATSAPP
+        </a>
+      </div>
     </div>
   </header>
 
   <!-- Hero with Cotizador as Central Conversion Protagonist -->
   <main>
-    <section class="py-10 md:py-16 bg-gradient-to-b from-white to-slate-100 border-b border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <section class="relative min-h-[680px] lg:min-h-[760px] flex items-center border-b border-slate-200 overflow-hidden bg-slate-950">
+      
+      <!-- Architectural Glass Photo Hero Backdrop (Mirrored: Windows on Left, Sea on Right) -->
+      <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+        <img src="assets/img/fachadas/hero-bg-cristalesgraf.webp" alt="Instalaciones de Cristal Templado y Carpintería de Aluminio CristalesGraf" class="w-full h-full object-cover object-center lg:object-[center_32%] opacity-100" loading="eager" fetchpriority="high">
+        <!-- Translucent protective scrim: luminous and clearly visible glass architecture on the left, clear sea on the right -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/20 to-slate-950/40 lg:bg-gradient-to-r lg:from-slate-950/55 lg:via-slate-950/20 lg:to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
-          <!-- Left: Value Proposition & Direct Confidence (5 cols) -->
-          <div class="lg:col-span-5 space-y-6">
-            
-            <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-navy/10 text-brand-navy font-mono text-xs font-bold uppercase rounded">
+          <!-- Columna Izquierda: Propuesta de Valor, Título y Badges de Confianza (lg:col-span-7) -->
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 font-mono text-xs font-bold uppercase rounded-full mb-4 backdrop-blur-sm">
               <span>PRECIOS DIRECTOS DE TALLER &middot; LIMA NORTE</span>
             </div>
 
-            <h1 class="font-display text-brand-navy font-bold tracking-tight">
+            <h1 class="font-display text-white font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight drop-shadow-md">
               Cotiza tu Mampara, Fachada o Ducha en 30 Segundos
             </h1>
 
-            <p class="text-slate-700 text-lg leading-relaxed">
+            <p class="text-slate-100 text-sm sm:text-base font-normal leading-relaxed mt-3 max-w-2xl drop-shadow">
               Sin intermediarios ni presupuestos demorados. Ingresa tus medidas aproximadas, obtén el cálculo de tu obra al instante y envíalo con un clic a nuestro WhatsApp oficial para recibir tu presupuesto formal y programar la visita de rectificación técnica a domicilio.
             </p>
 
-            <!-- 3 Trust Bullets -->
-            <div class="space-y-3 pt-2">
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-brand-navy text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-                  &check;
-                </div>
-                <p class="text-sm text-slate-800">
-                  <strong>+18 Años de Trayectoria:</strong> Más de 1,200 obras instaladas en todos los distritos de Lima.
-                </p>
+            <!-- 3 Trust Badges -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 text-xs font-mono text-slate-200">
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 shrink-0 rounded-full bg-brand-cyan text-slate-950 flex items-center justify-center font-bold text-xs leading-none">&check;</span>
+                <span><strong>+18 Años de Trayectoria:</strong> Más de 1,200 obras</span>
               </div>
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-brand-navy text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-                  &check;
-                </div>
-                <p class="text-sm text-slate-800">
-                  <strong>Cristales Certificados Limatambo:</strong> Vidrio templado conforme a la Norma E.040 del RNE.
-                </p>
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 shrink-0 rounded-full bg-brand-cyan text-slate-950 flex items-center justify-center font-bold text-xs leading-none">&check;</span>
+                <span><strong>Cristales Limatambo:</strong> Norma E.040 RNE</span>
               </div>
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-brand-navy text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-                  &check;
-                </div>
-                <p class="text-sm text-slate-800">
-                  <strong>Taller Físico en Los Olivos:</strong> Visítanos en Av. Tomás Valle 1102 o atendemos directamente en tu obra.
-                </p>
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 shrink-0 rounded-full bg-brand-cyan text-slate-950 flex items-center justify-center font-bold text-xs leading-none">&check;</span>
+                <span><strong>Taller en Los Olivos:</strong> Av. Tomás Valle 1102</span>
               </div>
             </div>
-
           </div>
 
-          <!-- Right: The Cotizador Express as Hero Centerpiece (7 cols) -->
-          <div id="cotizador-express" class="lg:col-span-7 bg-white border-2 border-brand-navy rounded-xl p-6 sm:p-8 shadow-xl">
-            
-            <div class="border-b border-slate-200 pb-4 mb-5 flex items-center justify-between">
-              <div>
-                <span class="font-mono text-xs font-bold text-brand-navy uppercase tracking-wider block">Cotizador Express de Obra</span>
-                <h2 class="font-display text-xl sm:text-2xl text-brand-navy font-bold mt-0.5">Calcula tus Medidas al Instante</h2>
-              </div>
-              <span class="bg-brand-whatsapp text-slate-950 font-mono text-xs font-bold px-2.5 py-1 rounded">
-                Respuesta en 10 min
-              </span>
-            </div>
-
-            <form class="space-y-5" onsubmit="event.preventDefault(); submitDirectToWhatsApp();">
+          <!-- Columna Derecha: Cotizador Express en formato Tarjeta Vertical (lg:col-span-5) -->
+          <div class="lg:col-span-5">
+            <div id="cotizador-express" class="bg-white/95 backdrop-blur-md border-2 border-brand-navy rounded-xl p-5 sm:p-6 shadow-2xl">
               
-              <!-- 1. Producto -->
-              <div>
-                <label for="quote-solution" class="block font-mono text-xs font-bold uppercase text-slate-700 mb-1.5">
-                  1. ¿Qué solución técnica requieres? *
-                </label>
-                <select id="quote-solution" class="w-full h-12 px-3.5 border-2 border-slate-300 rounded font-sans text-sm focus:border-brand-navy focus:outline-none">
-                  <option value="Mampara Corrediza de Vidrio Templado">Mampara Corrediza de Vidrio Templado (Serie 25 / Terraza)</option>
-                  <option value="Puerta de Ducha Templada 8mm">Puerta de Ducha Templada con Accesorios de Acero Inoxidable</option>
-                  <option value="Muro Cortina / Fachada Integral">Muro Cortina / Fachada Comercial Integral</option>
-                  <option value="Baranda de Cristal de Seguridad">Baranda de Cristal para Escalera o Balcón</option>
-                  <option value="Ventana de Aluminio Hermética">Ventana Corrediza o Proyectante Hermética (S-3825)</option>
-                  <option value="Techo de Vidrio Laminado">Techo Vidriado de Seguridad para Patio o Terraza</option>
-                </select>
-              </div>
-
-              <!-- 2. Espesor del cristal -->
-              <div>
-                <label class="block font-mono text-xs font-bold uppercase text-slate-700 mb-1.5">
-                  2. Espesor de cristal sugerido *
-                </label>
-                <div class="grid grid-cols-4 gap-2">
-                  <label class="cursor-pointer">
-                    <input type="radio" name="quote-thickness" value="6mm" class="peer sr-only">
-                    <span class="h-10 flex items-center justify-center font-mono text-xs font-semibold rounded border border-slate-300 bg-slate-50 text-slate-700 peer-checked:bg-brand-navy peer-checked:text-white peer-checked:border-brand-navy transition">
-                      6 mm
-                    </span>
-                  </label>
-                  <label class="cursor-pointer">
-                    <input type="radio" name="quote-thickness" value="8mm" class="peer sr-only" checked>
-                    <span class="h-10 flex items-center justify-center font-mono text-xs font-semibold rounded border border-slate-300 bg-slate-50 text-slate-700 peer-checked:bg-brand-navy peer-checked:text-white peer-checked:border-brand-navy transition">
-                      8 mm
-                    </span>
-                  </label>
-                  <label class="cursor-pointer">
-                    <input type="radio" name="quote-thickness" value="10mm" class="peer sr-only">
-                    <span class="h-10 flex items-center justify-center font-mono text-xs font-semibold rounded border border-slate-300 bg-slate-50 text-slate-700 peer-checked:bg-brand-navy peer-checked:text-white peer-checked:border-brand-navy transition">
-                      10 mm
-                    </span>
-                  </label>
-                  <label class="cursor-pointer">
-                    <input type="radio" name="quote-thickness" value="12mm" class="peer sr-only">
-                    <span class="h-10 flex items-center justify-center font-mono text-xs font-semibold rounded border border-slate-300 bg-slate-50 text-slate-700 peer-checked:bg-brand-navy peer-checked:text-white peer-checked:border-brand-navy transition">
-                      12 mm
-                    </span>
-                  </label>
-                </div>
-              </div>
-
-              <!-- 3. Medidas ancho x alto -->
-              <div class="grid grid-cols-2 gap-3">
+              <div class="border-b border-slate-200 pb-3 mb-4 flex items-center justify-between gap-2">
                 <div>
-                  <label for="quote-width" class="block font-mono text-xs font-bold uppercase text-slate-700 mb-1">
-                    Ancho aprox. (metros) *
-                  </label>
-                  <input type="number" id="quote-width" value="2.40" min="0.5" max="30" step="0.05" class="w-full h-11 px-3 border-2 border-slate-300 rounded font-mono text-sm focus:border-brand-navy focus:outline-none">
+                  <span class="font-mono text-xs font-bold text-brand-navy uppercase tracking-wider block">Cotizador Express de Obra</span>
+                  <h2 class="font-display text-lg sm:text-xl text-brand-navy font-bold mt-0.5">Calcula tus Medidas al Instante</h2>
                 </div>
+                <span class="inline-flex items-center gap-1.5 bg-brand-whatsapp text-slate-950 font-mono text-xs font-bold px-2 py-0.5 rounded shrink-0">
+                  <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  &lt;10 min
+                </span>
+              </div>
+
+              <form class="space-y-3.5" onsubmit="event.preventDefault(); submitDirectToWhatsApp();">
+                
+                <!-- 1. Solución técnica -->
                 <div>
-                  <label for="quote-height" class="block font-mono text-xs font-bold uppercase text-slate-700 mb-1">
-                    Alto aprox. (metros) *
+                  <label for="quote-solution" class="block font-mono text-xs font-bold uppercase text-slate-700 mb-1">
+                    1. Solución técnica *
                   </label>
-                  <input type="number" id="quote-height" value="2.20" min="0.5" max="15" step="0.05" class="w-full h-11 px-3 border-2 border-slate-300 rounded font-mono text-sm focus:border-brand-navy focus:outline-none">
+                  <select id="quote-solution" class="w-full h-11 px-3 border-2 border-slate-300 rounded font-sans text-sm focus:border-brand-navy focus:outline-none bg-white">
+                    <option value="Mampara Corrediza de Vidrio Templado">Mampara Corrediza (Serie 25 / 38)</option>
+                    <option value="Puerta de Ducha Templada 8mm">Puerta de Ducha Templada Inox</option>
+                    <option value="Muro Cortina / Fachada Integral">Muro Cortina / Fachada Comercial</option>
+                    <option value="Baranda de Cristal de Seguridad">Baranda de Cristal Balcón / Escalera</option>
+                    <option value="Ventana de Aluminio Hermética">Ventana Hermética Nova / S-3825</option>
+                    <option value="Techo de Vidrio Laminado">Techo Vidriado de Seguridad</option>
+                  </select>
                 </div>
-              </div>
 
-              <!-- 4. Distrito de instalación -->
-              <div>
-                <label for="quote-district" class="block font-mono text-xs font-bold uppercase text-slate-700 mb-1">
-                  Distrito de Lima donde se instalará *
-                </label>
-                <select id="quote-district" class="w-full h-11 px-3 border-2 border-slate-300 rounded text-sm focus:border-brand-navy focus:outline-none">
-                  <option value="Los Olivos">Los Olivos (Sede Taller)</option>
-                  <option value="San Martin de Porres">San Martín de Porres</option>
-                  <option value="Comas">Comas</option>
-                  <option value="Independencia">Independencia</option>
-                  <option value="Miraflores">Miraflores</option>
-                  <option value="San Isidro">San Isidro</option>
-                  <option value="Santiago de Surco">Santiago de Surco</option>
-                  <option value="San Borja">San Borja</option>
-                  <option value="La Molina">La Molina</option>
-                  <option value="Jesus Maria">Jesús María / Lince / Magdalena</option>
-                  <option value="San Miguel">San Miguel / Pueblo Libre</option>
-                  <option value="Callao">Callao / Bellavista</option>
-                  <option value="Otro Distrito Lima">Otro Distrito de Lima</option>
-                </select>
-              </div>
+                <!-- 2. Espesor del cristal -->
+                <div>
+                  <label class="block font-mono text-xs font-bold uppercase text-slate-700 mb-1">
+                    2. Espesor *
+                  </label>
+                  <div class="grid grid-cols-4 gap-1.5">
+                    <label class="cursor-pointer">
+                      <input type="radio" name="quote-thickness" value="6mm" class="peer sr-only">
+                      <span class="h-11 flex items-center justify-center font-mono text-xs font-semibold rounded border border-slate-300 bg-slate-50 text-slate-700 peer-checked:bg-brand-navy peer-checked:text-white peer-checked:border-brand-navy transition">
+                        6mm
+                      </span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="quote-thickness" value="8mm" class="peer sr-only" checked>
+                      <span class="h-11 flex items-center justify-center font-mono text-xs font-semibold rounded border border-slate-300 bg-slate-50 text-slate-700 peer-checked:bg-brand-navy peer-checked:text-white peer-checked:border-brand-navy transition">
+                        8mm
+                      </span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="quote-thickness" value="10mm" class="peer sr-only">
+                      <span class="h-11 flex items-center justify-center font-mono text-xs font-semibold rounded border border-slate-300 bg-slate-50 text-slate-700 peer-checked:bg-brand-navy peer-checked:text-white peer-checked:border-brand-navy transition">
+                        10mm
+                      </span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="quote-thickness" value="12mm" class="peer sr-only">
+                      <span class="h-11 flex items-center justify-center font-mono text-xs font-semibold rounded border border-slate-300 bg-slate-50 text-slate-700 peer-checked:bg-brand-navy peer-checked:text-white peer-checked:border-brand-navy transition">
+                        12mm
+                      </span>
+                    </label>
+                  </div>
+                  <p id="thickness-hint" class="font-mono text-xs text-brand-navy font-semibold mt-1.5 leading-snug">
+                    Norma E.040: Estándar reglamentario para mamparas corredizas y duchas.
+                  </p>
+                </div>
 
-              <!-- Live Metric Display -->
-              <div class="border-t border-slate-200 pt-3 flex items-center justify-between text-xs font-mono">
-                <span class="text-slate-600 font-semibold">Total de Área Estimada:</span>
-                <span id="quote-calc-area" class="text-brand-navy font-bold text-base">5.28 m²</span>
-              </div>
+                <!-- 3. Medidas ancho x alto -->
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <label class="block font-mono text-xs font-bold uppercase text-slate-700">
+                      3. Medidas (metros) *
+                    </label>
+                    <div class="flex items-center gap-1.5 font-mono text-xs">
+                      <span class="text-slate-500">Área:</span>
+                      <span id="quote-calc-area" class="text-brand-navy font-bold text-sm tracking-tight transition-transform">5.28 m²</span>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-2">
+                    <input type="number" id="quote-width" value="2.40" min="0.20" max="30" step="0.05" inputmode="decimal" placeholder="Ancho (m)" aria-label="Ancho en metros" class="w-full h-11 px-2.5 border-2 border-slate-300 rounded font-mono text-sm focus:border-brand-navy focus:outline-none bg-white">
+                    <input type="number" id="quote-height" value="2.20" min="0.20" max="15" step="0.05" inputmode="decimal" placeholder="Alto (m)" aria-label="Alto en metros" class="w-full h-11 px-2.5 border-2 border-slate-300 rounded font-mono text-sm focus:border-brand-navy focus:outline-none bg-white">
+                  </div>
+                </div>
 
-              <!-- Real-time WhatsApp Message Preview -->
-              <div class="border-t border-slate-200 pt-3">
-                <span class="block text-xs font-mono text-slate-500 uppercase mb-1">Mensaje directo a enviar:</span>
-                <p id="quote-preview-text" class="text-xs font-mono text-slate-700 italic">
-                  "Hola CristalesGraf, deseo cotizar..."
-                </p>
-              </div>
+                <!-- 4. Distrito de instalación -->
+                <div>
+                  <label for="quote-district" class="block font-mono text-xs font-bold uppercase text-slate-700 mb-1">
+                    4. Distrito Lima *
+                  </label>
+                  <select id="quote-district" class="w-full h-11 px-3 border-2 border-slate-300 rounded text-sm focus:border-brand-navy focus:outline-none bg-white">
+                    <option value="Los Olivos">Los Olivos (Sede Taller)</option>
+                    <option value="San Martin de Porres">San Martín de Porres</option>
+                    <option value="Comas">Comas</option>
+                    <option value="Independencia">Independencia</option>
+                    <option value="Miraflores">Miraflores</option>
+                    <option value="San Isidro">San Isidro</option>
+                    <option value="Santiago de Surco">Santiago de Surco</option>
+                    <option value="San Borja">San Borja</option>
+                    <option value="La Molina">La Molina</option>
+                    <option value="Jesus Maria">Jesús María / Lince</option>
+                    <option value="San Miguel">San Miguel / Pueblo Libre</option>
+                    <option value="Callao">Callao / Bellavista</option>
+                    <option value="Otro Distrito Lima">Otro Distrito de Lima</option>
+                  </select>
+                </div>
 
-              <!-- Huge Conversion CTA Button -->
-              <button type="submit" class="w-full h-14 bg-brand-whatsapp hover:bg-brand-whatsapp-hover text-slate-950 font-mono text-sm font-bold uppercase tracking-wider rounded-lg shadow-lg hover:shadow-xl transition flex items-center justify-center gap-3">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.772.88 2.792.88 3.183 0 5.77-2.587 5.77-5.766.001-3.183-2.584-5.766-5.77-5.766zm9.969 5.766c0 5.497-4.471 9.968-9.969 9.968-1.758 0-3.411-.462-4.851-1.272l-5.18 1.366 1.39-5.074c-.927-1.503-1.46-3.267-1.46-5.088 0-5.498 4.471-9.969 9.97-9.969 5.498 0 9.97 4.471 9.97 9.969z"/></svg>
-                <span>Enviar Medidas y Recibir Cotización Ahora</span>
-              </button>
+                <!-- Live WhatsApp Preview Box -->
+                <div>
+                  <p id="quote-preview-text" class="text-xs font-mono text-slate-700 italic bg-slate-50 p-2.5 border-l-2 border-brand-navy rounded-r break-words">
+                    "Hola CristalesGraf, deseo cotizar..."
+                  </p>
+                </div>
 
-              <p class="text-center text-xs text-slate-500 font-mono">
-                Atención directa &middot; Sin compromiso &middot; Asesoría técnica en obra incluida
-              </p>
+                <!-- Direct WhatsApp CTA Button -->
+                <button id="quote-submit-btn" type="submit" class="w-full h-12 px-4 bg-brand-whatsapp hover:bg-brand-whatsapp-hover active:scale-[0.98] text-slate-950 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 shrink-0 min-h-[44px]">
+                  <svg id="quote-btn-icon" class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                  <span id="quote-btn-text">Enviar Medidas a WhatsApp</span>
+                </button>
 
-            </form>
+              </form>
 
+            </div>
           </div>
 
         </div>
-
       </div>
     </section>
 
-    <!-- Popular Technical Solutions Grid -->
+    <!-- Popular Technical Solutions Grid with Glass Craft & Animate Hover -->
     <section class="py-16 bg-white border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -335,61 +388,73 @@
               Soluciones para Viviendas y Obras Comerciales
             </h2>
           </div>
-          <a href="productos.html" class="inline-flex items-center gap-2 text-sm font-bold text-brand-navy hover:text-brand-whatsapp-hover transition font-mono uppercase">
+          <a href="productos.html" class="inline-flex items-center gap-2 text-sm font-bold text-brand-navy hover:text-brand-navy-light transition font-mono uppercase min-h-[44px] py-2">
             <span>Ver Catálogo Completo &rarr;</span>
           </a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <div class="border border-slate-200 p-6 rounded-lg flex flex-col justify-between hover:border-brand-navy transition">
+          <div class="glass-craft border border-slate-200 p-5 rounded-lg flex flex-col justify-between hover:border-brand-navy hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white shadow-sm group">
             <div>
+              <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
+                <img src="assets/img/mamparas/mampara-serie-80.jpg" alt="Mampara Corrediza Serie 25 y 38 CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              </div>
               <span class="font-mono text-xs font-bold text-brand-navy block mb-1">SERIE 25 Y 38</span>
               <h3 class="font-display text-brand-navy text-lg font-bold mb-2">Mamparas Corredizas</h3>
               <p class="text-slate-600 text-sm leading-relaxed mb-4">
                 Sistemas de 2, 3 y 4 hojas con cristal de 8mm o 10mm, felpas siliconadas y rodamientos de suave desplazamiento.
               </p>
             </div>
-            <button onclick="setQuickSolution('Mampara Corrediza de Vidrio Templado', '8mm')" class="w-full py-2.5 bg-slate-100 hover:bg-brand-navy hover:text-white font-mono text-xs font-bold uppercase rounded transition">
+            <button onclick="setQuickSolution('Mampara Corrediza de Vidrio Templado', '8mm')" class="w-full min-h-[44px] py-2.5 bg-slate-100 hover:bg-brand-navy hover:text-white font-mono text-xs font-bold uppercase rounded transition flex items-center justify-center">
               Cargar en Cotizador
             </button>
           </div>
 
-          <div class="border border-slate-200 p-6 rounded-lg flex flex-col justify-between hover:border-brand-navy transition">
+          <div class="glass-craft border border-slate-200 p-5 rounded-lg flex flex-col justify-between hover:border-brand-navy hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white shadow-sm group">
             <div>
+              <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
+                <img src="assets/img/duchas/ducha-euro-doble-batiente.jpg" alt="Puerta de Ducha en Acero Inoxidable CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              </div>
               <span class="font-mono text-xs font-bold text-brand-navy block mb-1">ACERO INOX 304</span>
               <h3 class="font-display text-brand-navy text-lg font-bold mb-2">Puertas de Ducha</h3>
               <p class="text-slate-600 text-sm leading-relaxed mb-4">
                 Cristal templado de 8mm con herrajes anticorrosivos, jaladores tubulares y sellos magnéticos de estanqueidad.
               </p>
             </div>
-            <button onclick="setQuickSolution('Puerta de Ducha Templada 8mm', '8mm')" class="w-full py-2.5 bg-slate-100 hover:bg-brand-navy hover:text-white font-mono text-xs font-bold uppercase rounded transition">
+            <button onclick="setQuickSolution('Puerta de Ducha Templada 8mm', '8mm')" class="w-full min-h-[44px] py-2.5 bg-slate-100 hover:bg-brand-navy hover:text-white font-mono text-xs font-bold uppercase rounded transition flex items-center justify-center">
               Cargar en Cotizador
             </button>
           </div>
 
-          <div class="border border-slate-200 p-6 rounded-lg flex flex-col justify-between hover:border-brand-navy transition">
+          <div class="glass-craft border border-slate-200 p-5 rounded-lg flex flex-col justify-between hover:border-brand-navy hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white shadow-sm group">
             <div>
+              <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
+                <img src="assets/img/fachadas/muro-cortina-comercial.png" alt="Muro Cortina y Fachada Integral CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              </div>
               <span class="font-mono text-xs font-bold text-brand-navy block mb-1">CORPORATIVO</span>
               <h3 class="font-display text-brand-navy text-lg font-bold mb-2">Muros Cortina</h3>
               <p class="text-slate-600 text-sm leading-relaxed mb-4">
                 Fachadas integrales tipo Stick con cálculo estructural de viento y selladores estructurales Dow Corning.
               </p>
             </div>
-            <button onclick="setQuickSolution('Muro Cortina / Fachada Integral', '10mm')" class="w-full py-2.5 bg-slate-100 hover:bg-brand-navy hover:text-white font-mono text-xs font-bold uppercase rounded transition">
+            <button onclick="setQuickSolution('Muro Cortina / Fachada Integral', '10mm')" class="w-full min-h-[44px] py-2.5 bg-slate-100 hover:bg-brand-navy hover:text-white font-mono text-xs font-bold uppercase rounded transition flex items-center justify-center">
               Cargar en Cotizador
             </button>
           </div>
 
-          <div class="border border-slate-200 p-6 rounded-lg flex flex-col justify-between hover:border-brand-navy transition">
+          <div class="glass-craft border border-slate-200 p-5 rounded-lg flex flex-col justify-between hover:border-brand-navy hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white shadow-sm group">
             <div>
+              <div class="aspect-video w-full rounded overflow-hidden mb-4 bg-slate-100 border border-slate-200">
+                <img src="assets/img/barandas/baranda-vidrio-aluminio.jpg" alt="Baranda de Cristal de Seguridad CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              </div>
               <span class="font-mono text-xs font-bold text-brand-navy block mb-1">SEGURIDAD RNE</span>
               <h3 class="font-display text-brand-navy text-lg font-bold mb-2">Barandas de Cristal</h3>
               <p class="text-slate-600 text-sm leading-relaxed mb-4">
                 Cristal templado o laminado de 10mm con bases de aluminio empotradas o conectores spider de acero inoxidable.
               </p>
             </div>
-            <button onclick="setQuickSolution('Baranda de Cristal de Seguridad', '10mm')" class="w-full py-2.5 bg-slate-100 hover:bg-brand-navy hover:text-white font-mono text-xs font-bold uppercase rounded transition">
+            <button onclick="setQuickSolution('Baranda de Cristal de Seguridad', '10mm')" class="w-full min-h-[44px] py-2.5 bg-slate-100 hover:bg-brand-navy hover:text-white font-mono text-xs font-bold uppercase rounded transition flex items-center justify-center">
               Cargar en Cotizador
             </button>
           </div>
@@ -409,35 +474,57 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="border border-slate-200 p-6 rounded-lg text-center bg-white">
-            <div class="w-12 h-12 bg-brand-navy text-white rounded-full flex items-center justify-center mx-auto mb-4 font-mono font-bold text-lg">
-              18+
+          <div class="border border-slate-200 p-7 rounded-lg text-center bg-white shadow-sm hover:border-brand-navy transition">
+            <div class="font-mono text-4xl sm:text-5xl font-bold text-brand-navy tracking-tight mb-2">
+              +18 <span class="text-brand-cyan text-xl sm:text-2xl font-bold uppercase">Años</span>
             </div>
-            <h3 class="font-display text-brand-navy text-lg font-bold mb-2">Años de Experiencia</h3>
+            <h3 class="font-display text-brand-navy text-lg font-bold mb-2">Trayectoria en Lima Norte</h3>
             <p class="text-slate-600 text-sm leading-relaxed">
               Más de 18 años atendiendo proyectos en Lima. Conocemos el clima, los requerimientos sísmicos y la perfilería ideal para cada vano.
             </p>
           </div>
-          <div class="border border-slate-200 p-6 rounded-lg text-center bg-white">
-            <div class="w-12 h-12 bg-brand-navy text-white rounded-full flex items-center justify-center mx-auto mb-4 font-mono font-bold text-lg">
-              0%
+          <div class="border border-slate-200 p-7 rounded-lg text-center bg-white shadow-sm hover:border-brand-navy transition">
+            <div class="font-mono text-4xl sm:text-5xl font-bold text-brand-navy tracking-tight mb-2">
+              0% <span class="text-brand-cyan text-xl sm:text-2xl font-bold uppercase">Recargo</span>
             </div>
             <h3 class="font-display text-brand-navy text-lg font-bold mb-2">Cero Intermediarios</h3>
             <p class="text-slate-600 text-sm leading-relaxed">
               Fabricación en nuestro propio taller de Av. Tomás Valle 1102, Los Olivos. Ahorro real de costos directos de fábrica.
             </p>
           </div>
-          <div class="border border-slate-200 p-6 rounded-lg text-center bg-white">
-            <div class="w-12 h-12 bg-brand-navy text-white rounded-full flex items-center justify-center mx-auto mb-4 font-mono font-bold text-lg">
-              2A
+          <div class="border border-slate-200 p-7 rounded-lg text-center bg-white shadow-sm hover:border-brand-navy transition">
+            <div class="font-mono text-4xl sm:text-5xl font-bold text-brand-navy tracking-tight mb-2">
+              100% <span class="text-brand-cyan text-xl sm:text-2xl font-bold uppercase">Garantía</span>
             </div>
-            <h3 class="font-display text-brand-navy text-lg font-bold mb-2">2 Años de Garantía</h3>
+            <h3 class="font-display text-brand-navy text-lg font-bold mb-2">1 Año de Garantía Escrita</h3>
             <p class="text-slate-600 text-sm leading-relaxed">
-              Garantía formal en accesorios, rodamientos, perfiles y hermeticidad de sellado contra el viento y la humedad.
+              Garantía escrita de taller en herrajes, rodamientos, perfiles de aluminio y hermeticidad de sellado estructural.
             </p>
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- Certified Suppliers & Industrial Alliances -->
+    <section class="py-10 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-6">
+          <span class="font-mono text-xs font-bold uppercase text-slate-500">MATERIA PRIMA CERTIFICADA &middot; PROVEEDORES DE FÁBRICA</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-90">
+          <div class="flex items-center gap-3">
+            <img src="assets/img/marcas/logo-corporacion-limatambo.png" alt="Corporación Limatambo - Cristal Templado" class="h-9 sm:h-11 w-auto object-contain" loading="lazy">
+            <span class="font-mono text-xs font-bold text-slate-700">Cristal Templado de Seguridad</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="assets/img/marcas/logo-arclad.png" alt="ARclad - Selladores y Láminas de Seguridad" class="h-7 sm:h-9 w-auto object-contain" loading="lazy">
+            <span class="font-mono text-xs font-bold text-slate-700">Selladores Estructurales</span>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-1.5 border border-slate-300 rounded font-mono text-xs text-brand-navy font-bold">
+            <span>NORMA TÉCNICA E.040 RNE</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -454,7 +541,7 @@
           <div class="border border-slate-200 rounded p-4">
             <h3 class="font-display text-base font-bold text-brand-navy mb-1">¿Realizan visitas técnicas a domicilio para rectificar medidas?</h3>
             <p class="text-slate-600 text-sm leading-relaxed">
-              Sí. Una vez aprobada la cotización preliminar por WhatsApp, un maestro instalador acude a tu domicilio u obra en cualquier distrito de Lima para tomar las medidas láser milimétricas definitivas antes del templado.
+              Sí. En un plazo máximo de 48 horas tras coordinar tu cotización preliminar por WhatsApp, un maestro instalador acude a tu domicilio u obra en Lima para realizar la rectificación láser milimétrica definitiva.
             </p>
           </div>
           <div class="border border-slate-200 rounded p-4">
@@ -475,13 +562,15 @@
     </section>
   </main>
 
-  <!-- Complete Conversion Footer -->
-  <footer class="bg-brand-navy-dark text-slate-300 py-12 text-xs font-mono">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Global Footer -->
+  <footer class="bg-brand-navy-dark text-slate-400 font-sans border-t border-slate-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
       
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
-        <div class="md:col-span-2 space-y-3">
-          <div class="flex items-center gap-3 mb-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1 -->
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3 mb-4">
             <div class="w-9 h-9 bg-brand-navy rounded flex items-center justify-center text-white font-display font-bold text-lg border border-slate-700">
               <svg class="w-5 h-5 text-brand-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2"></rect>
@@ -489,42 +578,73 @@
                 <path d="M9 21V9"></path>
               </svg>
             </div>
-            <span class="font-display font-bold text-xl text-white tracking-tight">
+            <span class="font-display font-bold text-2xl text-white tracking-tight">
               CRISTALES<span class="text-brand-cyan">GRAF</span>
             </span>
           </div>
-          <p class="text-slate-400 font-sans text-sm leading-relaxed max-w-md">
-            Especialistas en vidrio templado, mamparas corredizas y cerramientos de aluminio en Lima. Más de 18 años de trayectoria formal con taller propio en Los Olivos.
+          <p class="text-sm leading-relaxed text-slate-400 mb-6">
+            Empresa especialista en manufactura e instalación de carpintería de aluminio y cristal templado de seguridad en Lima. Más de 18 años atendiendo proyectos residenciales y comerciales.
           </p>
-          <p class="text-slate-400">
-            RUC: 10416805821 &middot; Planta y Taller: Av. Tomás Valle 1102, Los Olivos, Lima.
-          </p>
+          <div class="font-mono text-xs text-slate-300 space-y-1">
+            <div>RUC: 10416805821</div>
+            <div>Sede Central: Av. Tomás Valle 1102, Los Olivos, Lima</div>
+          </div>
         </div>
 
-        <div>
-          <span class="text-white font-bold block mb-3 uppercase tracking-wider">Enlaces Rápidos</span>
-          <ul class="space-y-2 text-slate-400">
+        <!-- Col 2 -->
+        <div class="lg:col-span-2">
+          <h4 class="font-mono text-xs font-bold text-white uppercase tracking-wider mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm">
             <li><a href="index.html" class="hover:text-white transition">Inicio</a></li>
             <li><a href="productos.html" class="hover:text-white transition">Soluciones y Catálogo</a></li>
-            <li><a href="proyectos.html" class="hover:text-white transition">Obras Ejecutadas</a></li>
-            <li><a href="nosotros.html" class="hover:text-white transition">Nosotros y Taller</a></li>
+            <li><a href="proyectos.html" class="hover:text-white transition">Proyectos y Obras</a></li>
+            <li><a href="nosotros.html" class="hover:text-white transition">Nosotros</a></li>
             <li><a href="contacto.html" class="hover:text-white transition">Contacto y Taller</a></li>
           </ul>
         </div>
 
-        <div>
-          <span class="text-white font-bold block mb-3 uppercase tracking-wider">Canales Directos</span>
-          <ul class="space-y-2 text-slate-400">
-            <li>Central Fija: (01) 533-1887</li>
-            <li>WhatsApp Obra: +51 989 086 972</li>
-            <li>Horario: Lun - Sáb: 8:00 am - 7:00 pm</li>
-            <li>Norma E.040 &middot; RNE Vidrio</li>
+        <!-- Col 3 -->
+        <div class="lg:col-span-3">
+          <h4 class="font-mono text-xs font-bold text-white uppercase tracking-wider mb-4">Especialidades</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="productos.html#mamparas" class="hover:text-white transition">Mamparas Corredizas Serie 25/38</a></li>
+            <li><a href="productos.html#duchas" class="hover:text-white transition">Puertas de Ducha Acero Inox</a></li>
+            <li><a href="productos.html#fachadas" class="hover:text-white transition">Muros Cortina y Frentes de Tienda</a></li>
+            <li><a href="productos.html#ventanas" class="hover:text-white transition">Ventanas Acústicas Herméticas</a></li>
+            <li><a href="productos.html#barandas" class="hover:text-white transition">Barandas de Cristal Templado</a></li>
           </ul>
         </div>
+
+        <!-- Col 4 -->
+        <div class="lg:col-span-3">
+          <h4 class="font-mono text-xs font-bold text-white uppercase tracking-wider mb-4">Contacto Directo</h4>
+          <div class="space-y-3 text-sm">
+            <div>
+              <span class="block text-xs font-mono text-slate-500 uppercase">Teléfono Fijo</span>
+              <a href="tel:015331887" class="text-white font-mono hover:text-brand-cyan transition">(01) 533-1887</a>
+            </div>
+            <div>
+              <span class="block text-xs font-mono text-slate-500 uppercase">WhatsApp de Cotizaciones</span>
+              <a href="https://wa.me/51989086972" target="_blank" rel="noopener noreferrer" class="text-brand-whatsapp font-mono font-bold hover:underline">+51 989 086 972</a>
+            </div>
+            <div>
+              <span class="block text-xs font-mono text-slate-500 uppercase">Correo Electrónico</span>
+              <a href="mailto:ventas@cristalesgraf.com" class="text-white font-mono hover:text-brand-cyan transition">ventas@cristalesgraf.com</a>
+            </div>
+            <div>
+              <span class="block text-xs font-mono text-slate-500 uppercase">Horario de Taller</span>
+              <span class="text-slate-300">Lunes a Sábado: 8:00 am &ndash; 6:00 pm</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="pt-6 flex flex-wrap items-center justify-between gap-4 text-slate-500">
-        <p>&copy; 2026 CristalesGraf. Todos los derechos reservados.</p>
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
+        <div>
+          &copy; 2026 CristalesGraf. Todos los derechos reservados.
+        </div>
         <div>
           <span>Lima, Perú</span>
         </div>
@@ -534,36 +654,130 @@
   </footer>
 
   <!-- Floating WhatsApp Widget -->
-  <aside aria-label="Contacto directo por WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center gap-2 group">
+  <aside aria-label="Contacto directo por WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center gap-2 group" style="bottom: max(1.5rem, env(safe-area-inset-bottom)); right: max(1.5rem, env(safe-area-inset-right));">
     <div class="hidden sm:block bg-white text-brand-navy font-mono text-xs font-bold px-3 py-2 rounded-lg shadow-lg border border-slate-200">
       ¿Cotizamos en 2 min?
     </div>
     <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20deseo%20cotizar%20un%20proyecto%20urgente" target="_blank" rel="noopener noreferrer" aria-label="Escribir a WhatsApp CristalesGraf" class="w-14 h-14 bg-brand-whatsapp hover:bg-brand-whatsapp-hover text-slate-950 rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all focus:outline-none focus:ring-4 focus:ring-brand-whatsapp/30">
-      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.772.88 2.792.88 3.183 0 5.77-2.587 5.77-5.766.001-3.183-2.584-5.766-5.77-5.766zm9.969 5.766c0 5.497-4.471 9.968-9.969 9.968-1.758 0-3.411-.462-4.851-1.272l-5.18 1.366 1.39-5.074c-.927-1.503-1.46-3.267-1.46-5.088 0-5.498 4.471-9.969 9.97-9.969 5.498 0 9.97 4.471 9.97 9.969z"/></svg>
+      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     </a>
   </aside>
 
-  <!-- Interactive Cotizador Scripts -->
+  <!-- Interactive Cotizador & UI Scripts -->
   <script>
-    function updateCotizador() {
-      const prod = document.getElementById('quote-solution')?.value || 'Mampara Corrediza';
-      const thick = document.querySelector('input[name="quote-thickness"]:checked')?.value || '8mm';
-      const w = parseFloat(document.getElementById('quote-width')?.value || '2.4');
-      const h = parseFloat(document.getElementById('quote-height')?.value || '2.2');
-      const dist = document.getElementById('quote-district')?.value || 'Los Olivos';
+    // --- 1. Mobile Navigation Logic ---
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
 
-      const area = (w * h).toFixed(2);
-      const areaEl = document.getElementById('quote-calc-area');
-      if (areaEl) areaEl.textContent = `${area} m²`;
-
-      const msg = `Hola CristalesGraf, deseo cotizar urgente: ${prod} en cristal de ${thick}. Medidas aproximadas: ${w.toFixed(2)}m ancho x ${h.toFixed(2)}m alto (${area} m²). Instalación en distrito: ${dist}. Por favor enviarme presupuesto formal.`;
-      
-      const prevEl = document.getElementById('quote-preview-text');
-      if (prevEl) prevEl.textContent = `"${msg}"`;
-      return msg;
+    function toggleMobileMenu() {
+      if (!mobileMenu) return;
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        hamburgerIcon?.classList.add('hidden');
+        closeIcon?.classList.remove('hidden');
+        mobileBtn?.setAttribute('aria-expanded', 'true');
+      } else {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon?.classList.remove('hidden');
+        closeIcon?.classList.add('hidden');
+        mobileBtn?.setAttribute('aria-expanded', 'false');
+      }
     }
 
-    ['quote-solution', 'quote-width', 'quote-height', 'quote-district'].forEach(id => {
+    function closeMobileMenu() {
+      if (!mobileMenu) return;
+      mobileMenu.classList.add('hidden');
+      hamburgerIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+      mobileBtn?.setAttribute('aria-expanded', 'false');
+    }
+
+    if (mobileBtn) {
+      mobileBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    // --- 2. Technical Recommendation Engine (Norma E.040) ---
+    const solutionSpecs = {
+      'Mampara Corrediza de Vidrio Templado': { thickness: '8mm', note: 'Norma E.040: Estándar reglamentario para mamparas corredizas.' },
+      'Puerta de Ducha Templada 8mm': { thickness: '8mm', note: 'Norma E.040: Recomendado 8 mm templado de seguridad.' },
+      'Muro Cortina / Fachada Integral': { thickness: '10mm', note: 'Norma E.040: Vidrio estructural para muros cortina y fachadas.' },
+      'Baranda de Cristal de Seguridad': { thickness: '10mm', note: 'Norma E.040: Vidrio templado 10 mm de alta resistencia.' },
+      'Ventana de Aluminio Hermética': { thickness: '6mm', note: 'Norma E.040: Recomendado 6 mm acústico hermético.' },
+      'Techo de Vidrio Laminado': { thickness: '10mm', note: 'Norma E.040: 10 mm templado o laminado de seguridad.' }
+    };
+
+    function applyRecommendedThickness(solutionName) {
+      const spec = solutionSpecs[solutionName];
+      if (spec) {
+        const radio = document.querySelector(`input[name="quote-thickness"][value="${spec.thickness}"]`);
+        if (radio) radio.checked = true;
+        const hintEl = document.getElementById('thickness-hint');
+        if (hintEl) hintEl.textContent = spec.note;
+      }
+    }
+
+    // --- 3. Hardened Cotizador Calculation & WhatsApp Engine ---
+    function updateCotizador() {
+      const prod = document.getElementById('quote-solution')?.value || 'Mampara Corrediza de Vidrio Templado';
+      const thickRadio = document.querySelector('input[name="quote-thickness"]:checked');
+      const thick = thickRadio ? thickRadio.value : '8mm';
+      const rawW = document.getElementById('quote-width')?.value || '';
+      const rawH = document.getElementById('quote-height')?.value || '';
+      const dist = document.getElementById('quote-district')?.value || 'Los Olivos';
+
+      const w = parseFloat(rawW);
+      const h = parseFloat(rawH);
+      const isValid = !isNaN(w) && !isNaN(h) && w >= 0.20 && h >= 0.20 && w <= 30 && h <= 15;
+
+      const areaEl = document.getElementById('quote-calc-area');
+      const prevEl = document.getElementById('quote-preview-text');
+
+      let msg = '';
+
+      if (isValid) {
+        const area = (w * h).toFixed(2);
+        if (areaEl) {
+          areaEl.innerHTML = `<span class="text-brand-navy font-bold text-sm sm:text-base">${area} m²</span>`;
+          areaEl.classList.remove('calc-pulsing');
+          void areaEl.offsetWidth; // Trigger reflow for smooth re-trigger
+          areaEl.classList.add('calc-pulsing');
+        }
+        msg = `Hola CristalesGraf, deseo cotizar urgente: ${prod} en cristal de ${thick}. Medidas aproximadas: ${w.toFixed(2)}m ancho x ${h.toFixed(2)}m alto (${area} m²). Instalación en distrito: ${dist}. Por favor enviarme presupuesto formal y disponibilidad de rectificación técnica en obra.`;
+      } else {
+        if (areaEl) {
+          areaEl.innerHTML = `<span class="text-amber-600 font-semibold text-xs">Por rectificar</span>`;
+        }
+        msg = `Hola CristalesGraf, deseo cotizar: ${prod} en cristal de ${thick}. Medidas por rectificar en obra. Instalación en distrito: ${dist}. Por favor contactarme para coordinar visita técnica y presupuesto.`;
+      }
+
+      if (prevEl) {
+        prevEl.textContent = `"${msg}"`;
+      }
+
+      return { valid: isValid, message: msg };
+    }
+
+    // Dynamic technical explainer per thickness
+    const thicknessNotes = {
+      '6mm': 'Norma E.040: Ventanas herméticas y vanos de menor presión de viento.',
+      '8mm': 'Norma E.040: Estándar reglamentario para mamparas corredizas y duchas.',
+      '10mm': 'Norma E.040: Vidrio estructural para muros cortina, barandas y techos.',
+      '12mm': 'Norma E.040: Máxima resistencia para vitrinas y frentes de gran vano.'
+    };
+
+    // Event listeners
+    const solSelect = document.getElementById('quote-solution');
+    if (solSelect) {
+      solSelect.addEventListener('change', () => {
+        applyRecommendedThickness(solSelect.value);
+        updateCotizador();
+      });
+    }
+
+    ['quote-width', 'quote-height', 'quote-district'].forEach(id => {
       const el = document.getElementById(id);
       if (el) {
         el.addEventListener('input', updateCotizador);
@@ -572,23 +786,53 @@
     });
 
     document.querySelectorAll('input[name="quote-thickness"]').forEach(r => {
-      r.addEventListener('change', updateCotizador);
+      r.addEventListener('change', () => {
+        const hintEl = document.getElementById('thickness-hint');
+        if (hintEl) {
+          hintEl.textContent = thicknessNotes[r.value] || `Seleccionado: ${r.value}`;
+        }
+        updateCotizador();
+      });
     });
 
+    // Tactile delight submit to WhatsApp with cooldown hardening
+    let isSubmittingQuote = false;
     function submitDirectToWhatsApp() {
-      const text = updateCotizador();
-      window.open(`https://wa.me/51989086972?text=${encodeURIComponent(text)}`, '_blank');
+      if (isSubmittingQuote) return;
+      const btn = document.getElementById('quote-submit-btn');
+      const btnText = document.getElementById('quote-btn-text');
+      const res = updateCotizador();
+
+      if (btn && btnText) {
+        isSubmittingQuote = true;
+        btn.disabled = true;
+        btnText.textContent = "Preparando Expediente para WhatsApp...";
+        btn.classList.add('opacity-90', 'scale-[0.99]');
+        setTimeout(() => {
+          window.open(`https://wa.me/51989086972?text=${encodeURIComponent(res.message)}`, '_blank');
+          btnText.textContent = "Enviar Medidas a WhatsApp";
+          btn.classList.remove('opacity-90', 'scale-[0.99]');
+          btn.disabled = false;
+          setTimeout(() => { isSubmittingQuote = false; }, 800);
+        }, 300);
+      } else {
+        window.open(`https://wa.me/51989086972?text=${encodeURIComponent(res.message)}`, '_blank');
+      }
     }
 
     // Helper to load solution from catalog cards directly into the calculator
     function setQuickSolution(solutionName, thickness) {
-      const solSelect = document.getElementById('quote-solution');
-      if (solSelect) {
-        solSelect.value = solutionName;
+      const sol = document.getElementById('quote-solution');
+      if (sol) {
+        sol.value = solutionName;
       }
       if (thickness) {
         const radio = document.querySelector(`input[name="quote-thickness"][value="${thickness}"]`);
         if (radio) radio.checked = true;
+        const hintEl = document.getElementById('thickness-hint');
+        if (hintEl) hintEl.textContent = `Seleccionado: ${thickness}`;
+      } else {
+        applyRecommendedThickness(solutionName);
       }
       updateCotizador();
       const calcSection = document.getElementById('cotizador-express');

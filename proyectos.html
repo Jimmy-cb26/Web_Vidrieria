@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es-PE" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Obras y Proyectos Ejecutados | CristalesGraf Lima</title>
   <meta name="description" content="Portafolio de obras en vidrio templado, muros cortina y carpintería de aluminio ejecutadas por CristalesGraf en Lima y Callao. Más de 18 años de experiencia en obra.">
   <meta name="keywords" content="proyectos vidrio templado lima, obras carpinteria aluminio san borja, muro cortina los olivos, fachadas comerciales lima, cristalesgraf portafolio">
@@ -104,6 +104,32 @@
       outline: 2px solid #00529c;
       outline-offset: 2px;
     }
+
+    /* Glass Light Sheen Effect on Cards */
+    .glass-craft {
+      position: relative;
+      overflow: hidden;
+    }
+    .glass-craft::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -120%;
+      width: 60%;
+      height: 200%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.45),
+        transparent
+      );
+      transform: rotate(25deg);
+      transition: left 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+    .glass-craft:hover::after {
+      left: 140%;
+    }
   </style>
 </head>
 <body class="bg-brand-surface text-slate-900 font-sans antialiased selection:bg-brand-navy selection:text-white">
@@ -132,14 +158,14 @@
         <a href="index.html#cotizador-express" class="inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-brand-navy-light text-white text-xs font-semibold px-4 py-2.5 rounded transition shadow-sm font-mono uppercase tracking-wide">
           <span>Cotizador Express</span>
         </a>
-        <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20deseo%20cotizar%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsapp-hover text-slate-950 font-bold text-xs px-4 py-2.5 rounded transition shadow-sm font-mono uppercase tracking-wider">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.772.88 2.792.88 3.183 0 5.77-2.587 5.77-5.766.001-3.183-2.584-5.766-5.77-5.766zm9.969 5.766c0 5.497-4.471 9.968-9.969 9.968-1.758 0-3.411-.462-4.851-1.272l-5.18 1.366 1.39-5.074c-.927-1.503-1.46-3.267-1.46-5.088 0-5.498 4.471-9.969 9.97-9.969 5.498 0 9.97 4.471 9.97 9.969z"/></svg>
+        <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20deseo%20cotizar%20un%20proyecto%20similar%20al%20portafolio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-brand-whatsapp hover:bg-brand-whatsapp-hover text-slate-950 font-bold text-xs px-4 py-2.5 rounded transition shadow-sm font-mono uppercase tracking-wider">
+          <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           <span>WhatsApp</span>
         </a>
       </div>
 
       <!-- Mobile Button -->
-      <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" class="lg:hidden p-2 text-slate-700 hover:text-brand-navy rounded-md focus:outline-none focus:ring-2 focus:ring-brand-navy">
+      <button id="mobile-menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2.5 text-slate-700 hover:text-brand-navy rounded-md min-h-[44px] min-w-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-brand-navy">
         <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
@@ -151,17 +177,18 @@
     </div>
 
     <!-- Mobile Nav Dropdown -->
-    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
-      <a href="index.html" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3">Inicio</a>
-      <a href="productos.html" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3">Soluciones y Catálogo</a>
-      <a href="proyectos.html" class="block py-2 text-base font-semibold text-brand-navy border-l-4 border-brand-navy pl-3">Obras Ejecutadas</a>
-      <a href="nosotros.html" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3">Nosotros y Taller</a>
-      <a href="contacto.html" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3">Contacto y Cotización</a>
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2">
+      <a href="index.html" class="block py-3 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3 rounded hover:bg-slate-50 transition">Inicio</a>
+      <a href="productos.html" class="block py-3 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3 rounded hover:bg-slate-50 transition">Soluciones y Catálogo</a>
+      <a href="proyectos.html" class="block py-3 text-base font-semibold text-brand-navy border-l-4 border-brand-navy pl-3 bg-slate-50">Obras Ejecutadas</a>
+      <a href="nosotros.html" class="block py-3 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3 rounded hover:bg-slate-50 transition">Nosotros y Taller</a>
+      <a href="contacto.html" class="block py-3 text-base font-semibold text-slate-700 hover:text-brand-navy pl-3 rounded hover:bg-slate-50 transition">Contacto y Cotización</a>
       <div class="pt-4 border-t border-slate-100 flex flex-col gap-2">
-        <a href="index.html#cotizador-express" class="w-full text-center bg-brand-navy text-white font-mono text-sm font-semibold py-3 rounded">
+        <a href="index.html#cotizador-express" class="w-full text-center bg-brand-navy text-white font-mono text-sm font-semibold py-3.5 rounded min-h-[44px] flex items-center justify-center">
           IR AL COTIZADOR EXPRESS
         </a>
-        <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20deseo%20cotizar%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-brand-whatsapp text-slate-950 font-mono text-sm font-bold py-3 rounded flex items-center justify-center gap-2">
+        <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20deseo%20cotizar%20un%20proyecto%20similar%20al%20portafolio" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-brand-whatsapp hover:bg-brand-whatsapp-hover active:scale-[0.98] text-slate-950 font-mono text-sm font-bold py-3.5 rounded min-h-[44px] flex items-center justify-center gap-2 transition">
+          <svg class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           COTIZAR POR WHATSAPP
         </a>
       </div>
@@ -190,16 +217,16 @@
 
       <!-- Filter Tabs -->
       <div class="mt-10 flex flex-wrap gap-2 border-b border-slate-200 pb-3" role="tablist">
-        <button id="filter-all" onclick="filterProjects('all')" class="project-tab font-mono text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded bg-brand-navy text-white transition">
+        <button id="filter-all" onclick="filterProjects('all')" class="project-tab font-mono text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded bg-brand-navy text-white min-h-[44px] inline-flex items-center justify-center transition active:scale-95">
           Todas las Obras (6)
         </button>
-        <button id="filter-residencial" onclick="filterProjects('residencial')" class="project-tab font-mono text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+        <button id="filter-residencial" onclick="filterProjects('residencial')" class="project-tab font-mono text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 min-h-[44px] inline-flex items-center justify-center transition active:scale-95">
           Residencial (2)
         </button>
-        <button id="filter-comercial" onclick="filterProjects('comercial')" class="project-tab font-mono text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+        <button id="filter-comercial" onclick="filterProjects('comercial')" class="project-tab font-mono text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 min-h-[44px] inline-flex items-center justify-center transition active:scale-95">
           Comercial (2)
         </button>
-        <button id="filter-fachadas" onclick="filterProjects('fachadas')" class="project-tab font-mono text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+        <button id="filter-fachadas" onclick="filterProjects('fachadas')" class="project-tab font-mono text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 min-h-[44px] inline-flex items-center justify-center transition active:scale-95">
           Fachadas y Muros Cortina (2)
         </button>
       </div>
@@ -215,38 +242,44 @@
 
       <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <!-- Obra 1: San Borja Residencial -->
-        <article class="project-card bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="residencial">
+        <!-- Obra 1: Vivienda Los Olivos Residencial -->
+        <article class="project-card glass-craft bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group" data-category="residencial">
           <div>
+            <div class="aspect-video w-full overflow-hidden rounded bg-slate-100 mb-4 border border-slate-200">
+              <img src="assets/img/proyectos/obra-vivienda-los-olivos-01.jpg" alt="Vivienda Familiar en Los Olivos - CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
-              <span class="font-mono text-xs font-bold text-brand-navy">SAN BORJA &middot; 2025</span>
+              <span class="font-mono text-xs font-bold text-brand-navy">LOS OLIVOS &middot; 2025</span>
               <span class="font-mono text-xs text-slate-500">Residencial</span>
             </div>
-            <h3 class="font-display text-brand-navy mb-2">Edificio Multifamiliar Los Sauces</h3>
+            <h3 class="font-display text-brand-navy mb-2">Vivienda Familiar Los Olivos</h3>
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
-              Instalación de 18 mamparas corredizas Serie 25 en cristal templado 8mm incoloro para terrazas frontales y 24 puertas de ducha en acero inoxidable 304.
+              Instalación de mamparas corredizas Serie 25 en cristal templado 8mm incoloro para terrazas frontales y ventanas herméticas con perfilería de aluminio pesada.
             </p>
             <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
-              <div><strong>Ubicación:</strong> Av. San Borja Sur, San Borja</div>
-              <div><strong>Soluciones:</strong> Mamparas Serie 25 + Duchas Inox</div>
+              <div><strong>Ubicación:</strong> Urb. Los Olivos, Lima Norte</div>
+              <div><strong>Soluciones:</strong> Mamparas Serie 25 + Ventanas Nova</div>
               <div><strong>Cristal:</strong> Templado 8mm Corporación Limatambo</div>
-              <div><strong>Plazo entrega:</strong> 12 días calendario sin demoras</div>
+              <div><strong>Plazo entrega:</strong> 10 días calendario sin demoras</div>
             </div>
           </div>
-          <button onclick="openProjectLightbox('Edificio Multifamiliar Los Sauces', 'San Borja', '18 mamparas Serie 25 y 24 puertas de ducha en acero inoxidable 304 con cristal templado de 8mm Limatambo.', 'Mamparas y Duchas')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+          <button onclick="openProjectByIndex(0)" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
             <span>Ver Ficha Técnica de Obra</span>
-            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.057-9.542-7z"/></svg>
+            <svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.057-9.542-7z"/></svg>
           </button>
         </article>
 
         <!-- Obra 2: Fachada Surco -->
-        <article class="project-card bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="fachadas">
+        <article class="project-card glass-craft bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group" data-category="fachadas">
           <div>
+            <div class="aspect-video w-full overflow-hidden rounded bg-slate-100 mb-4 border border-slate-200">
+              <img src="assets/img/fachadas/muro-cortina-comercial.png" alt="Muro Cortina Comercial Edificio - CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
               <span class="font-mono text-xs font-bold text-brand-navy">SURCO &middot; 2025</span>
               <span class="font-mono text-xs text-slate-500">Fachada</span>
             </div>
-            <h3 class="font-display text-brand-navy mb-2">Centro Empresarial Primavera</h3>
+            <h3 class="font-display text-brand-navy mb-2">Muro Cortina Comercial Primavera</h3>
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
               Muro cortina continuo de 180 m² en cristal templado 10mm reflejante con montantes de aluminio estructural pesados y sellado estanco antisísmico.
             </p>
@@ -257,105 +290,117 @@
               <div><strong>Normativa:</strong> Cálculo de deflexión Norma E.040</div>
             </div>
           </div>
-          <button onclick="openProjectLightbox('Centro Empresarial Primavera', 'Santiago de Surco', 'Muro cortina de 180m² en cristal templado 10mm reflejante con montantes de aluminio pesados y sellado estructural de silicona neutra.', 'Muro Cortina Comercial')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+          <button onclick="openProjectByIndex(1)" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
             <span>Ver Ficha Técnica de Obra</span>
-            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.057-9.542-7z"/></svg>
+            <svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.057-9.542-7z"/></svg>
           </button>
         </article>
 
-        <!-- Obra 3: Galería Comercial Tomás Valle -->
-        <article class="project-card bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="comercial">
+        <!-- Obra 3: Salón de Eventos Barranca -->
+        <article class="project-card glass-craft bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group" data-category="comercial">
           <div>
+            <div class="aspect-video w-full overflow-hidden rounded bg-slate-100 mb-4 border border-slate-200">
+              <img src="assets/img/proyectos/obra-salon-barranca.png" alt="Salón de Eventos y Recepciones en Barranca - CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
-              <span class="font-mono text-xs font-bold text-brand-navy">LOS OLIVOS &middot; 2026</span>
+              <span class="font-mono text-xs font-bold text-brand-navy">BARRANCA &middot; 2025</span>
               <span class="font-mono text-xs text-slate-500">Comercial</span>
             </div>
-            <h3 class="font-display text-brand-navy mb-2">Galería Comercial Tomás Valle</h3>
+            <h3 class="font-display text-brand-navy mb-2">Salón de Recepciones Barranca</h3>
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
-              Fabricación de 14 frentes de tienda con cristal templado de 10mm, frenos hidráulicos de piso de alto tránsito para 120 kg y cerraduras de anclaje inferior.
+              Cerramientos panorámicos de gran altura con puertas dobles batientes comerciales y paños de cristal templado 10mm para integración visual de salones.
             </p>
             <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
-              <div><strong>Ubicación:</strong> Av. Tomás Valle cdra 11, Los Olivos</div>
-              <div><strong>Solución:</strong> Vitrinas y puertas con freno de piso</div>
-              <div><strong>Cristal:</strong> Templado 10mm de alta transparencia</div>
-              <div><strong>Seguridad:</strong> Chapas centrales reforzadas</div>
+              <div><strong>Ubicación:</strong> Av. Grau, Barranca, Lima Provincias</div>
+              <div><strong>Solución:</strong> Cerramientos panorámicos y accesos</div>
+              <div><strong>Cristal:</strong> Templado 10mm alta transparencia</div>
+              <div><strong>Herrajes:</strong> Bisagras hidráulicas de uso rudo</div>
             </div>
           </div>
-          <button onclick="openProjectLightbox('Galería Comercial Tomás Valle', 'Los Olivos', '14 frentes de tienda comerciales en cristal templado 10mm con frenos de piso Miyasawa y cerraduras inferiores de seguridad.', 'Frentes de Tienda')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+          <button onclick="openProjectByIndex(2)" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
             <span>Ver Ficha Técnica de Obra</span>
-            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.057-9.542-7z"/></svg>
+            <svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.057-9.542-7z"/></svg>
           </button>
         </article>
 
-        <!-- Obra 4: Residencia La Molina -->
-        <article class="project-card bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="residencial">
+        <!-- Obra 4: Residencia Chaclacayo -->
+        <article class="project-card glass-craft bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group" data-category="residencial">
           <div>
+            <div class="aspect-video w-full overflow-hidden rounded bg-slate-100 mb-4 border border-slate-200">
+              <img src="assets/img/mamparas/mampara-serie-80.jpg" alt="Mamparas Serie 80 en Residencia Panorámica - CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
-              <span class="font-mono text-xs font-bold text-brand-navy">LA MOLINA &middot; 2025</span>
+              <span class="font-mono text-xs font-bold text-brand-navy">CHACLACAYO &middot; 2025</span>
               <span class="font-mono text-xs text-slate-500">Residencial</span>
             </div>
-            <h3 class="font-display text-brand-navy mb-2">Residencia Familiar Las Lagunas</h3>
+            <h3 class="font-display text-brand-navy mb-2">Residencia Panorámica Chaclacayo</h3>
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
-              Mamparas plegables y corredizas panorámicas de piso a techo (3.00m de altura) con perfiles de aluminio Serie 38 negro mate y barandas de balcón autoportantes.
+              Mamparas correderas Serie 80 de piso a techo (2.80m de altura) con perfiles de aluminio negro mate y cristales templados con cierre hermético perimetral.
             </p>
             <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
-              <div><strong>Ubicación:</strong> Urb. Las Lagunas, La Molina</div>
-              <div><strong>Solución:</strong> Mamparas panorámicas y barandas</div>
-              <div><strong>Cristal:</strong> Templado 10mm incoloro Limatambo</div>
+              <div><strong>Ubicación:</strong> Urb. Los Cóndores, Chaclacayo</div>
+              <div><strong>Solución:</strong> Mamparas correderas Serie 80</div>
+              <div><strong>Cristal:</strong> Templado 8mm incoloro Limatambo</div>
               <div><strong>Acabado:</strong> Aluminio electrostático negro mate</div>
             </div>
           </div>
-          <button onclick="openProjectLightbox('Residencia Familiar Las Lagunas', 'La Molina', 'Mamparas panorámicas de 3.00m de altura en Serie 38 negro mate con cristal templado de 10mm y barandas autoportantes en balcones.', 'Mamparas Panorámicas')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+          <button onclick="openProjectByIndex(3)" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
             <span>Ver Ficha Técnica de Obra</span>
-            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.057-9.542-7z"/></svg>
+            <svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.057-9.542-7z"/></svg>
           </button>
         </article>
 
-        <!-- Obra 5: Oficinas Corporativas San Isidro -->
-        <article class="project-card bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="comercial">
+        <!-- Obra 5: Frente Comercial Vaivén -->
+        <article class="project-card glass-craft bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group" data-category="comercial">
           <div>
+            <div class="aspect-video w-full overflow-hidden rounded bg-slate-100 mb-4 border border-slate-200">
+              <img src="assets/img/proyectos/obra-puerta-vaiven.jpg" alt="Puertas Vaivén de Alto Tránsito - CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
-              <span class="font-mono text-xs font-bold text-brand-navy">SAN ISIDRO &middot; 2025</span>
+              <span class="font-mono text-xs font-bold text-brand-navy">CALLAO &middot; 2026</span>
               <span class="font-mono text-xs text-slate-500">Comercial</span>
             </div>
-            <h3 class="font-display text-brand-navy mb-2">Oficinas Corporativas Rivera Navarrete</h3>
+            <h3 class="font-display text-brand-navy mb-2">Frente Comercial y Puertas Vaivén</h3>
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
-              Divisiones modulares para salas de directorio y estaciones operativas en cristal templado 10mm con esmerilado decorativo en franjas y puertas corredizas aéreas.
+              Instalación de frentes de tienda con cristal templado 10mm, puertas batientes con freno hidráulico de piso de alto tránsito para 120 kg y cerraduras de seguridad.
             </p>
             <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
-              <div><strong>Ubicación:</strong> Calle Rivera Navarrete, San Isidro</div>
-              <div><strong>Solución:</strong> Tabiquería de cristal y directorios</div>
-              <div><strong>Cristal:</strong> Templado 10mm con vinil esmerilado</div>
-              <div><strong>Ejecución:</strong> Turno nocturno sin interrupción de labores</div>
+              <div><strong>Ubicación:</strong> Av. Faucett, Callao / Lima</div>
+              <div><strong>Solución:</strong> Puertas vaivén con freno de piso</div>
+              <div><strong>Cristal:</strong> Templado 10mm de alta resistencia</div>
+              <div><strong>Seguridad:</strong> Chapas inferiores con anclaje al piso</div>
             </div>
           </div>
-          <button onclick="openProjectLightbox('Oficinas Corporativas Rivera Navarrete', 'San Isidro', 'Divisiones acústicas y de cristal templado 10mm con franjas arenadas y puertas corredizas aéreas para 8 salas de reuniones.', 'Divisiones de Oficina')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+          <button onclick="openProjectByIndex(4)" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
             <span>Ver Ficha Técnica de Obra</span>
-            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.057-9.542-7z"/></svg>
+            <svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.057-9.542-7z"/></svg>
           </button>
         </article>
 
-        <!-- Obra 6: Edificio Comercial Independencia -->
-        <article class="project-card bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy transition" data-category="fachadas">
+        <!-- Obra 6: Fachada Integral Los Olivos -->
+        <article class="project-card glass-craft bg-white border border-slate-300 rounded p-6 flex flex-col justify-between hover:border-brand-navy hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group" data-category="fachadas">
           <div>
+            <div class="aspect-video w-full overflow-hidden rounded bg-slate-100 mb-4 border border-slate-200">
+              <img src="assets/img/proyectos/obra-vivienda-los-olivos-02.jpg" alt="Fachada Integral y Balcones Los Olivos - CristalesGraf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
-              <span class="font-mono text-xs font-bold text-brand-navy">INDEPENDENCIA &middot; 2025</span>
+              <span class="font-mono text-xs font-bold text-brand-navy">LOS OLIVOS &middot; 2025</span>
               <span class="font-mono text-xs text-slate-500">Fachada</span>
             </div>
-            <h3 class="font-display text-brand-navy mb-2">Fachada Integral Instituto Panamericana</h3>
+            <h3 class="font-display text-brand-navy mb-2">Fachada Integral & Balcones</h3>
             <p class="text-sm text-slate-600 leading-relaxed mb-4">
-              Envolvente vidriada en 4 niveles sobre la Av. Carlos Izaguirre. Ventanas de proyección superior y cristales de seguridad con tratamiento acústico.
+              Envolvente vidriada en 3 niveles sobre avenida principal. Mamparas frontales, ventanas proyectantes acústicas y barandas de seguridad con anclaje estructural.
             </p>
             <div class="font-mono text-xs text-slate-700 space-y-1.5 py-3 border-t border-slate-100 mb-6">
-              <div><strong>Ubicación:</strong> Av. Carlos Izaguirre, Independencia</div>
-              <div><strong>Solución:</strong> Fachada de aluminio y cristal de 4 pisos</div>
+              <div><strong>Ubicación:</strong> Av. Antúnez de Mayolo, Los Olivos</div>
+              <div><strong>Solución:</strong> Fachada de aluminio y cristal integral</div>
               <div><strong>Cristal:</strong> Templado 8mm y 10mm de seguridad</div>
               <div><strong>Respaldo:</strong> Sello de calidad Limatambo en cada cristal</div>
             </div>
           </div>
-          <button onclick="openProjectLightbox('Fachada Integral Instituto Panamericana', 'Independencia', 'Fachada vidriada en 4 pisos sobre avenida principal con perfiles pesados y cristal templado acústico.', 'Fachada Integral')" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
+          <button onclick="openProjectByIndex(5)" class="w-full h-11 bg-brand-navy hover:bg-brand-navy-light text-white font-mono text-xs font-bold uppercase tracking-wider rounded flex items-center justify-center gap-2 transition">
             <span>Ver Ficha Técnica de Obra</span>
-            <svg class="w-4 h-4 text-brand-whatsapp" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.057-9.542-7z"/></svg>
+            <svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.057-9.542-7z"/></svg>
           </button>
         </article>
 
@@ -372,12 +417,12 @@
           ¿Tiene planos o medidas de una obra similar?
         </h2>
         <p class="text-slate-300 text-base leading-relaxed">
-          Envíenos el detalle de su proyecto por WhatsApp o coordine una rectificación técnica sin costo en obra.
+          Envíenos el detalle de su proyecto por WhatsApp o coordine una rectificación técnica en obra en 48 horas sin costo adicional.
         </p>
       </div>
       <div class="flex flex-col sm:flex-row gap-3">
         <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20tengo%20planos%20de%20un%20proyecto%20para%20cotizar" target="_blank" rel="noopener noreferrer" class="h-12 px-7 bg-brand-whatsapp hover:bg-brand-whatsapp-hover text-slate-950 font-mono font-bold text-sm uppercase rounded flex items-center justify-center gap-2 transition shadow">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.772.88 2.792.88 3.183 0 5.77-2.587 5.77-5.766.001-3.183-2.584-5.766-5.77-5.766zm9.969 5.766c0 5.497-4.471 9.968-9.969 9.968-1.758 0-3.411-.462-4.851-1.272l-5.18 1.366 1.39-5.074c-.927-1.503-1.46-3.267-1.46-5.088 0-5.498 4.471-9.969 9.97-9.969 5.498 0 9.97 4.471 9.97 9.969z"/></svg>
+          <svg class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           <span>Cotizar Obra por WhatsApp</span>
         </a>
         <a href="index.html#cotizador-express" class="h-12 px-6 bg-white/10 hover:bg-white/20 text-white font-mono font-semibold text-sm uppercase rounded flex items-center justify-center border border-white/20 transition">
@@ -446,11 +491,15 @@
           <div class="space-y-3 text-sm">
             <div>
               <span class="block text-xs font-mono text-slate-500 uppercase">Teléfono Fijo</span>
-              <a href="tel:015331887" class="text-white font-mono hover:text-brand-whatsapp transition">(01) 533-1887</a>
+              <a href="tel:015331887" class="text-white font-mono hover:text-brand-cyan transition">(01) 533-1887</a>
             </div>
             <div>
               <span class="block text-xs font-mono text-slate-500 uppercase">WhatsApp de Cotizaciones</span>
               <a href="https://wa.me/51989086972" target="_blank" rel="noopener noreferrer" class="text-brand-whatsapp font-mono font-bold hover:underline">+51 989 086 972</a>
+            </div>
+            <div>
+              <span class="block text-xs font-mono text-slate-500 uppercase">Correo Electrónico</span>
+              <a href="mailto:ventas@cristalesgraf.com" class="text-white font-mono hover:text-brand-cyan transition">ventas@cristalesgraf.com</a>
             </div>
             <div>
               <span class="block text-xs font-mono text-slate-500 uppercase">Horario de Taller</span>
@@ -462,7 +511,7 @@
       </div>
 
       <!-- Bottom Bar -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
         <div>
           &copy; 2026 CristalesGraf. Todos los derechos reservados.
         </div>
@@ -475,20 +524,27 @@
   </footer>
 
   <!-- Lightbox Modal de Obra Ejecutada -->
-  <div id="project-lightbox" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+  <div id="project-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-white border-2 border-brand-navy rounded max-w-lg w-full p-6 sm:p-7 relative shadow-2xl">
       
       <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div>
-          <span class="font-mono text-xs font-bold text-brand-navy uppercase">Ficha de Obra Terminada</span>
+          <div class="flex items-center gap-2">
+            <span class="font-mono text-xs font-bold text-brand-navy uppercase">Ficha de Obra Terminada</span>
+            <span id="lightbox-counter" class="font-mono text-xs text-slate-500 bg-slate-100 px-2 py-0.5 rounded">Obra 1 de 6</span>
+          </div>
           <h2 id="lightbox-title" class="font-display text-xl font-bold text-brand-navy mt-0.5">Proyecto</h2>
         </div>
-        <button onclick="closeProjectLightbox()" aria-label="Cerrar ficha" class="p-1 text-slate-400 hover:text-slate-800">
+        <button onclick="closeProjectLightbox()" aria-label="Cerrar ficha" class="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-slate-400 hover:text-slate-800 rounded">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
       </div>
 
       <div class="space-y-4">
+        <div class="aspect-video w-full overflow-hidden rounded bg-slate-100 border border-slate-200">
+          <img id="lightbox-img" src="assets/img/proyectos/obra-vivienda-los-olivos-01.jpg" alt="Ficha técnica de obra ejecutada" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='assets/img/fachadas/muro-cortina-comercial.png';">
+        </div>
+
         <div>
           <span class="font-mono text-xs font-bold text-slate-500 uppercase block">Ubicación / Distrito</span>
           <p id="lightbox-district" class="text-sm font-semibold text-slate-800 mt-0.5">Distrito</p>
@@ -499,9 +555,25 @@
           <p id="lightbox-description" class="text-sm text-slate-700 leading-relaxed mt-0.5">Descripción</p>
         </div>
 
+        <!-- Lightbox Navigation & Action Controls -->
+        <div class="flex items-center justify-between gap-2 pt-2 border-t border-slate-100">
+          <button id="lightbox-prev-btn" onclick="prevProject()" aria-label="Obra anterior" class="min-h-[44px] px-3 font-mono text-xs font-semibold text-slate-700 hover:text-brand-navy flex items-center gap-1.5 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            <span>Anterior</span>
+          </button>
+          <button id="lightbox-copy-btn" onclick="copyProjectSummary()" aria-label="Copiar ficha técnica" class="min-h-[44px] px-3 font-mono text-xs font-semibold text-brand-navy hover:text-brand-navy-light flex items-center gap-1.5 transition">
+            <svg id="lightbox-copy-icon" class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            <span id="lightbox-copy-text">Copiar Ficha</span>
+          </button>
+          <button id="lightbox-next-btn" onclick="nextProject()" aria-label="Siguiente obra" class="min-h-[44px] px-3 font-mono text-xs font-semibold text-slate-700 hover:text-brand-navy flex items-center gap-1.5 transition">
+            <span>Siguiente</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
         <div class="pt-2 border-t border-slate-100 flex flex-col gap-2">
           <button id="lightbox-wa-btn" class="w-full h-12 bg-brand-whatsapp hover:bg-brand-whatsapp-hover text-slate-950 font-mono font-bold text-sm uppercase rounded flex items-center justify-center gap-2 transition shadow">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.772.88 2.792.88 3.183 0 5.77-2.587 5.77-5.766.001-3.183-2.584-5.766-5.77-5.766zm9.969 5.766c0 5.497-4.471 9.968-9.969 9.968-1.758 0-3.411-.462-4.851-1.272l-5.18 1.366 1.39-5.074c-.927-1.503-1.46-3.267-1.46-5.088 0-5.498 4.471-9.969 9.97-9.969 5.498 0 9.97 4.471 9.97 9.969z"/></svg>
+            <svg class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             <span>Cotizar Proyecto Similar</span>
           </button>
         </div>
@@ -510,18 +582,84 @@
     </div>
   </div>
 
+  <!-- Floating Toast Notification -->
+  <div id="toast-notify" class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 bg-brand-navy-dark text-white font-mono text-xs px-4 py-2.5 rounded shadow-xl border border-slate-700 transition-opacity duration-300 opacity-0 pointer-events-none flex items-center gap-2">
+    <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+    <span id="toast-message">Notificación</span>
+  </div>
+
   <!-- Floating WhatsApp Widget -->
-  <aside aria-label="Contacto directo por WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center gap-2 group">
+  <aside aria-label="Contacto directo por WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center gap-2 group" style="bottom: max(1.5rem, env(safe-area-inset-bottom)); right: max(1.5rem, env(safe-area-inset-right));">
     <div class="hidden sm:block bg-white text-brand-navy font-mono text-xs font-bold px-3 py-2 rounded-lg shadow-lg border border-slate-200 group-hover:scale-105 transition-transform">
       ¿Cotizamos en 2 min?
     </div>
     <a href="https://wa.me/51989086972?text=Hola%20CristalesGraf,%20deseo%20cotizar%20una%20obra" target="_blank" rel="noopener noreferrer" aria-label="Escribir a WhatsApp CristalesGraf" class="w-14 h-14 bg-brand-whatsapp hover:bg-brand-whatsapp-hover text-slate-950 rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all focus:outline-none focus:ring-4 focus:ring-brand-whatsapp/30">
-      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.54 1.772.88 2.792.88 3.183 0 5.77-2.587 5.77-5.766.001-3.183-2.584-5.766-5.77-5.766zm9.969 5.766c0 5.497-4.471 9.968-9.969 9.968-1.758 0-3.411-.462-4.851-1.272l-5.18 1.366 1.39-5.074c-.927-1.503-1.46-3.267-1.46-5.088 0-5.498 4.471-9.969 9.97-9.969 5.498 0 9.97 4.471 9.97 9.969z"/></svg>
+      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     </a>
   </aside>
 
   <!-- Interactive Scripts -->
   <script>
+    // Projects Data Registry
+    const projectsData = [
+      {
+        title: 'Vivienda Familiar Los Olivos',
+        district: 'Los Olivos, Lima Norte',
+        desc: 'Instalación de mamparas corredizas Serie 25 en cristal templado 8mm incoloro Limatambo y cerramientos perimetrales de aluminio.',
+        solucion: 'Mamparas Serie 25 + Ventanas Nova',
+        cristal: 'Templado 8mm Corporación Limatambo',
+        plazo: '10 días calendario sin demoras',
+        imgSrc: 'assets/img/proyectos/obra-vivienda-los-olivos-01.jpg'
+      },
+      {
+        title: 'Muro Cortina Comercial Primavera',
+        district: 'Santiago de Surco',
+        desc: 'Muro cortina continuo de 180 m² en cristal templado 10mm reflejante con montantes de aluminio pesados y sellado estructural de silicona neutra.',
+        solucion: 'Muro cortina de aluminio estructural',
+        cristal: 'Templado 10mm con control solar',
+        plazo: 'Cálculo de deflexión Norma E.040',
+        imgSrc: 'assets/img/fachadas/muro-cortina-comercial.png'
+      },
+      {
+        title: 'Salón de Recepciones Barranca',
+        district: 'Barranca, Lima Provincias',
+        desc: 'Cerramientos perimetrales de cristal templado 10mm con puertas batientes comerciales de alto tránsito y perfilería reforzada.',
+        solucion: 'Cerramientos panorámicos y accesos',
+        cristal: 'Templado 10mm alta transparencia',
+        plazo: 'Bisagras hidráulicas de uso rudo',
+        imgSrc: 'assets/img/proyectos/obra-salon-barranca.png'
+      },
+      {
+        title: 'Residencia Panorámica Chaclacayo',
+        district: 'Urb. Los Cóndores, Chaclacayo',
+        desc: 'Mamparas correderas panorámicas Serie 80 de piso a techo en cristal templado 8mm Limatambo con perfilería negra hermética.',
+        solucion: 'Mamparas correderas Serie 80',
+        cristal: 'Templado 8mm incoloro Limatambo',
+        plazo: 'Aluminio electrostático negro mate',
+        imgSrc: 'assets/img/mamparas/mampara-serie-80.jpg'
+      },
+      {
+        title: 'Frente Comercial y Puertas Vaivén',
+        district: 'Av. Faucett, Callao / Lima',
+        desc: 'Frentes comerciales con puertas vaivén en cristal templado 10mm, frenos de piso de alto tránsito y cerraduras inferiores de seguridad.',
+        solucion: 'Puertas vaivén con freno de piso',
+        cristal: 'Templado 10mm de alta resistencia',
+        plazo: 'Chapas inferiores con anclaje al piso',
+        imgSrc: 'assets/img/proyectos/obra-puerta-vaiven.jpg'
+      },
+      {
+        title: 'Fachada Integral & Balcones',
+        district: 'Av. Antúnez de Mayolo, Los Olivos',
+        desc: 'Fachada vidriada en 3 pisos con mamparas frontales, ventanas proyectantes y barandas de seguridad bajo Norma E.040.',
+        solucion: 'Fachada de aluminio y cristal integral',
+        cristal: 'Templado 8mm y 10mm de seguridad',
+        plazo: 'Sello de calidad Limatambo en cada cristal',
+        imgSrc: 'assets/img/proyectos/obra-vivienda-los-olivos-02.jpg'
+      }
+    ];
+
+    let currentProjectIndex = 0;
+
     // Mobile navigation toggle
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -535,10 +673,12 @@
           mobileMenu.classList.remove('hidden');
           hamburgerIcon.classList.add('hidden');
           closeIcon.classList.remove('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'true');
         } else {
           mobileMenu.classList.add('hidden');
           hamburgerIcon.classList.remove('hidden');
           closeIcon.classList.add('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'false');
         }
       });
     }
@@ -574,28 +714,104 @@
     const lbTitle = document.getElementById('lightbox-title');
     const lbDistrict = document.getElementById('lightbox-district');
     const lbDesc = document.getElementById('lightbox-description');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCounter = document.getElementById('lightbox-counter');
     const lbWaBtn = document.getElementById('lightbox-wa-btn');
 
-    function openProjectLightbox(title, district, desc, solution) {
-      if (lightbox && lbTitle && lbDistrict && lbDesc && lbWaBtn) {
-        lbTitle.textContent = title;
-        lbDistrict.textContent = district;
-        lbDesc.textContent = desc;
+    function renderProjectByIndex(idx) {
+      if (idx < 0) idx = projectsData.length - 1;
+      if (idx >= projectsData.length) idx = 0;
+      currentProjectIndex = idx;
 
-        lbWaBtn.onclick = function() {
-          const text = `Hola CristalesGraf, he visto el proyecto ejecutado "${title}" en ${district} y deseo cotizar una obra similar para mi proyecto.`;
-          window.open(`https://wa.me/51989086972?text=${encodeURIComponent(text)}`, '_blank');
-        };
+      const p = projectsData[idx];
+      if (!p) return;
 
-        lightbox.classList.remove('hidden');
+      if (lbTitle) lbTitle.textContent = p.title;
+      if (lbDistrict) lbDistrict.textContent = p.district;
+      if (lbDesc) lbDesc.textContent = p.desc;
+      if (lbCounter) lbCounter.textContent = `Obra ${idx + 1} de ${projectsData.length}`;
+      if (lbImg) {
+        lbImg.src = p.imgSrc;
+        lbImg.alt = p.title;
       }
+
+      let isSubmittingLb = false;
+      if (lbWaBtn) {
+        lbWaBtn.onclick = function() {
+          if (isSubmittingLb) return;
+          isSubmittingLb = true;
+          const text = `Hola CristalesGraf, he visto el proyecto ejecutado "${p.title}" en ${p.district} y deseo cotizar una obra similar para mi proyecto.`;
+          window.open(`https://wa.me/51989086972?text=${encodeURIComponent(text)}`, '_blank');
+          setTimeout(() => { isSubmittingLb = false; }, 800);
+        };
+      }
+    }
+
+    function openProjectByIndex(idx) {
+      renderProjectByIndex(idx);
+      if (lightbox) {
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function prevProject() {
+      renderProjectByIndex(currentProjectIndex - 1);
+    }
+
+    function nextProject() {
+      renderProjectByIndex(currentProjectIndex + 1);
     }
 
     function closeProjectLightbox() {
       if (lightbox) {
         lightbox.classList.add('hidden');
+        document.body.style.overflow = '';
       }
     }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast-notify');
+      const toastMsg = document.getElementById('toast-message');
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = msg;
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 2500);
+    }
+
+    function copyProjectSummary() {
+      const p = projectsData[currentProjectIndex];
+      if (!p) return;
+      const text = `CristalesGraf - Ficha de Obra Terminada\nProyecto: ${p.title}\nUbicación: ${p.district}\nSolución: ${p.solucion}\nCristal: ${p.cristal}\nDetalle: ${p.desc}\nContacto directo: +51 989 086 972 | Av. Tomás Valle 1102, Los Olivos`;
+      
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('¡Ficha de obra copiada al portapapeles!');
+        const btnText = document.getElementById('lightbox-copy-text');
+        if (btnText) {
+          const original = btnText.textContent;
+          btnText.textContent = '¡Copiado!';
+          setTimeout(() => { btnText.textContent = original; }, 2000);
+        }
+      }).catch(() => {
+        showToast('Texto copiado.');
+      });
+    }
+
+    // Keyboard navigation (Esc to close, Left/Right arrows to step)
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox || lightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') {
+        closeProjectLightbox();
+      } else if (e.key === 'ArrowLeft') {
+        prevProject();
+      } else if (e.key === 'ArrowRight') {
+        nextProject();
+      }
+    });
 
     if (lightbox) {
       lightbox.addEventListener('click', (e) => {
@@ -605,8 +821,5 @@
       });
     }
   </script>
-<!-- impeccable-live-start -->
-<script src="http://localhost:8400/live.js?token=ab200aab-5899-4caf-a50c-72b79c63a1b6"></script>
-<!-- impeccable-live-end -->
 </body>
 </html>
